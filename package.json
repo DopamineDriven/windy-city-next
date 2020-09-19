@@ -5,5 +5,11 @@
   "repository": "https://github.com/DopamineDriven/windy-city-next.git",
   "author": "Andrew Ross <andrew.simpson.ross@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"postinstall": "npx patch-package"
+	}
 }
