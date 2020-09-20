@@ -10,3 +10,5 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
 function App({ Component, pageProps }: AppProps): ReactElement {
 	return <Component {...pageProps} />;
 }
+
+export default App;

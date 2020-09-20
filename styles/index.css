@@ -3,9 +3,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth#:~:text=WebKit%20im
 */
 
 .light-mode {
-	--color-bg-primary: #ebe8e0;
+	/* --color-bg-primary: #ebe8e0;
 	--color-text-primary: #000000;
-	--color-text-secondary: #151515;
+	--color-text-secondary: #151515; */
 }
 
 .dark-mode {
@@ -41,11 +41,11 @@ html {
         color: #fff;
     } */
 
-#__next {
+/* #__next {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-}
+} */
 
 body {
 	-ms-overflow-style: none; /* IE and Edge */
