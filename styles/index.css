@@ -6,16 +6,18 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth#:~:text=WebKit%20im
 	/* --color-bg-primary: #ebe8e0;
 	--color-text-primary: #000000;
 	--color-text-secondary: #151515; */
+	@apply bg-portfolio text-black border-black; 
 }
 
 .dark-mode {
-	--color-bg-primary: #14171f;
+	/* --color-bg-primary: #14171f;
 	--color-text-primary: #ffffff;
-	--color-text-secondary: #eaeaea;
+	--color-text-secondary: #eaeaea; */
+	@apply bg-black text-white;
 }
 
 :root {
-	@apply .light-mode;
+	@apply .dark-mode;
 }
 
 html {
