@@ -80,8 +80,7 @@ module.exports = {
 				// subpolished: ['Montserrat', 'sans-serif']
 			},
 			// backgroundColor: {
-			// 	primary: 'var(--color-bg-primary)',
-			// 	secondary: 'var(--color-bg-secondary)'
+			// 	primary: 'var(--color-bg-primary)'
 			// },
 			// textColor: {
 			// 	accent: 'var(--color-text-accent)',
