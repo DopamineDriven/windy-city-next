@@ -23,5 +23,5 @@
 		"lib/**/*",
 		// "types/**/*"
 	],
-	"exclude": ["node_modules", "postcss.config.js"]
+	"exclude": ["node_modules"]
 }
