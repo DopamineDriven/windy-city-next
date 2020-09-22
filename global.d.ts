@@ -1,5 +1,5 @@
 declare module 'fs';
 declare module 'tailwindcss-dark-mode';
-declare module 'postcss-preset-env';
+export declare module 'react-spring';
 const postcssPresetEnv: postcssPresetEnv.PostcssPresetEnv;
 export = postcssPresetEnv;
