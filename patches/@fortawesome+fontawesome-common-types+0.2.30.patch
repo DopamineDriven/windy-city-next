@@ -1,0 +1,40 @@
+diff --git a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
+index b70b000..a70f0ed 100644
+--- a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
++++ b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
+@@ -1,4 +1,4 @@
+-export type IconPrefix = "fas" | "fab" | "far" | "fal" | "fad";
++export type IconPrefix = "fas" | "fab" | "fac" | "far" | "fal" | "fad";
+ export type IconPathData = string | string[]
+ 
+ export interface IconLookup {
+@@ -22,6 +22,29 @@ export interface IconPack {
+ }
+ 
+ export type IconName = '500px' | 
++  'antdesign-icon' | 
++  'apollo-icon' | 
++  'ar-icon' | 
++  'auth-icon' | 
++  'cloudinary-icon' | 
++  'crapp-icon' | 
++  'customar-icon' | 
++  'gatsby-icon' | 
++  'graphql-icon' | 
++  'heroku-icon' | 
++  'jwt-icon' | 
++  'mongodb-icon' | 
++  'mysql-icon' | 
++  'next-icon' | 
++  'oauth-icon' | 
++  'postgresql-icon' | 
++  'redux-icon' | 
++  'styledcomponents-icon' | 
++  'stylelint-icon' | 
++  'vercel-icon' | 
++  'vim-icon' | 
++  'tailwind-icon' | 
++  'typescript-icon' | 
+   'accessible-icon' | 
+   'accusoft' | 
+   'acquisitions-incorporated' | 

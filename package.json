@@ -7,13 +7,19 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 5000",
     "build": "next build",
     "start": "next start",
     "postinstall": "npx patch-package"
   },
   "dependencies": {
     "@artsy/fresnel": "^1.2.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@next/bundle-analyzer": "^9.5.3",
     "@tailwindcss/typography": "^0.2.0",
     "@types/google.analytics": "^0.0.40",
     "classnames": "^2.2.6",

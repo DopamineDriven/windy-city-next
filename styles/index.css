@@ -3,20 +3,35 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth#:~:text=WebKit%20im
 */
 
 .light-mode {
-	/* --color-bg-primary: #ebe8e0;
+	@apply bg-portfolio text-black border-black;
+	--color-bg-primary: #ebe8e0;
+	--color-bg-auxiliary: #eaeaea;
 	--color-text-primary: #000000;
-	--color-text-secondary: #151515; */
-	@apply bg-portfolio text-black border-black; 
+	--color-text-auxiliary: #151515;
+	--color-text-tertiary: #505050;
+	--color-text-quaternary: #ebe8e0;
+	--color-border-primary: #000000;
+	--color-fill-primary: #000000;
+	--color-fill-auxiliary: #151515;
+	--color-stroke-primary: #000000;
 }
 
 .dark-mode {
-	/* --color-bg-primary: #14171f;
+	@apply bg-black text-white border-white;
+	--color-bg-primary: #000000;
+	--color-bg-auxiliary: #151515;
 	--color-text-primary: #ffffff;
-	--color-text-secondary: #eaeaea; */
-	@apply bg-black text-white;
+	--color-text-auxiliary: #eaeaea;
+	--color-text-tertiary: #afafaf;
+	--color-text-quaternary: #000000;
+	--color-border-primary: #ffffff;
+	--color-fill-primary: #ffffff;
+	--color-fill-auxiliary: #eaeaea;
+	--color-stroke-primary: #ffffff;
 }
 
 :root {
+	@apply .light-mode;
 	@apply .dark-mode;
 }
 
@@ -33,21 +48,21 @@ html {
 }
 
 /* ::-moz-selection {
-        text-shadow: none;
-        background: #333;
-        color: #fff;
-    }
-    ::selection {
-        text-shadow: none;
-        background: #333;
-        color: #fff;
-    } */
+	text-shadow: none;
+	background: #333;
+	color: #fff;
+}
+::selection {
+	text-shadow: none;
+	background: #333;
+	color: #fff;
+} */
 
-/* #__next {
+#__next {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-} */
+}
 
 body {
 	-ms-overflow-style: none; /* IE and Edge */
@@ -63,31 +78,31 @@ body::-webkit-scrollbar {
 @tailwind base;
 /* Write custom base styles here */
 /* @font-face {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 400;
-        src: url(https://fonts.googleapis.com/css2?family=Barlow%20Condensed&family=Barlow%20Semi%20Condensed&display=swap)
-            format('woff2');
-    }
-    
-    @font-face {
-        font-family: 'brandon-grotesque', sans-serif;
-        font-weight: 400;
-        src: url(https://use.typekit.net/hzg4mdi.css) format('woff2');
-    }
-    
-    @font-face {
-        font-family: 'Montserrat', 'sans-serif';
-        font-weight: 400;
-        src: url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)
-            format('woff2');
-    }
-    
-    @font-face {
-        font-family: 'Playfair Display', serif;
-        font-weight: 500;
-        src: url(https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@500&display=swap)
-            format('woff2');
-    } */
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 400;
+	src: url(https://fonts.googleapis.com/css2?family=Barlow%20Condensed&family=Barlow%20Semi%20Condensed&display=swap)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'brandon-grotesque', sans-serif;
+	font-weight: 400;
+	src: url(https://use.typekit.net/hzg4mdi.css) format('woff2');
+}
+
+@font-face {
+	font-family: 'Montserrat', 'sans-serif';
+	font-weight: 400;
+	src: url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	src: url(https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@500&display=swap)
+		format('woff2');
+} */
 
 @font-face {
 	font-family: 'goudy-bookletter-1911', serif;
@@ -108,10 +123,10 @@ body::-webkit-scrollbar {
 }
 
 /* @font-face {
-        font-family: 'neue-haas-grotesk-display', sans-serif;
-        font-weight: 300;
-        src: url(https://use.typekit.net/sbg1kws.css) format('woff2');
-    } */
+	font-family: 'neue-haas-grotesk-display', sans-serif;
+	font-weight: 300;
+	src: url(https://use.typekit.net/sbg1kws.css) format('woff2');
+} */
 
 /* Start purging... */
 @tailwind components;
@@ -119,8 +134,8 @@ body::-webkit-scrollbar {
 
 /* Write custom component styles here */
 /* @ {
-        text-shadow: 'none';
-    } */
+	text-shadow: 'none';
+} */
 
 /* Start purging... */
 @tailwind utilities;
@@ -255,12 +270,4 @@ body::-webkit-scrollbar {
 
 .fa-portfolioDivider {
 	@apply text-customTitle;
-}
-
-.block.light-mode {
-	@apply bg-portfolio text-black border-fiveOBlack;
-}
-
-.block.dark-mode {
-	@apply bg-black;
 }
