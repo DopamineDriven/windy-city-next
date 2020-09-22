@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Lead from 'components/lead';
+import Footer from 'components/footer';
 import { Fragment } from 'react';
 import { MediaContextProvider } from 'components/window-width';
 import { CLIENT_NAME } from 'lib/constants';
@@ -11,7 +12,7 @@ const Index = () => {
 				<Head>
 					<title>{`${CLIENT_NAME} landing page`}</title>
 				</Head>
-				<div className='dark:text-white dark:bg-black text-black'>True</div>
+				<Footer />
 			</MediaContextProvider>
 		</Fragment>
 	);

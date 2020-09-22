@@ -70,7 +70,7 @@ export const AndrewIcon: SvgIcon = (props): JSX.Element => {
 	);
 };
 
-export const ArIcon: SvgIcon = (props): JSX.Element => {
+export const WcdIcon: SvgIcon = (props): JSX.Element => {
 	const {
 		strokeColor = [],
 		classNames = [],
@@ -89,6 +89,33 @@ export const ArIcon: SvgIcon = (props): JSX.Element => {
 	const [fillColor1 = 'none', fillColor2 = ' '] = fillColor;
 	const [strokeWidth1 = '2.0'] = strokeWidth;
 	return (
+		<svg
+			width={width}
+			height={height}
+			viewBox='0 0 90 90'
+			fill={fillColor1}
+			xmlns='http://www.w3.org/2000/svg'
+			className={className1}
+			transform={`rotate(${rotateCenter}, 90, 90)`}
+		>
+			<circle
+				cx='45'
+				cy='45'
+				r='43.5'
+				stroke={strokeColor1}
+				strokeWidth={strokeWidth1}
+				className={className2}
+			/>
+			<path
+				d='M29.0723 46.472L31.8803 37.418H33.7883L36.5963 46.472L39.7643 37.418H42.0503L37.6583 50H35.5523L32.9063 41.378H32.7623L30.1163 50H28.0103L23.6183 37.418H25.9043L29.0723 46.472ZM47.7517 48.074C48.4837 48.074 49.1137 47.954 49.6417 47.714C50.1697 47.462 50.7217 47.066 51.2977 46.526L52.6657 47.93C51.3337 49.406 49.7137 50.144 47.8057 50.144C45.9097 50.144 44.3317 49.532 43.0717 48.308C41.8237 47.084 41.1997 45.536 41.1997 43.664C41.1997 41.792 41.8357 40.232 43.1077 38.984C44.3917 37.736 46.0057 37.112 47.9497 37.112C49.9057 37.112 51.5377 37.832 52.8457 39.272L51.4957 40.748C50.8957 40.172 50.3257 39.77 49.7857 39.542C49.2577 39.314 48.6337 39.2 47.9137 39.2C46.6417 39.2 45.5737 39.614 44.7097 40.442C43.8457 41.258 43.4137 42.308 43.4137 43.592C43.4137 44.864 43.8397 45.932 44.6917 46.796C45.5557 47.648 46.5757 48.074 47.7517 48.074ZM57.5836 37.418C59.8396 37.418 61.5736 37.97 62.7856 39.074C63.9976 40.166 64.6036 41.69 64.6036 43.646C64.6036 45.602 64.0156 47.15 62.8396 48.29C61.6636 49.43 59.8636 50 57.4396 50H53.2636V37.418H57.5836ZM62.4616 43.7C62.4616 40.82 60.8116 39.38 57.5116 39.38H55.3876V48.002H57.7456C59.2696 48.002 60.4336 47.642 61.2376 46.922C62.0536 46.19 62.4616 45.116 62.4616 43.7Z'
+				fill={fillColor2}
+				className={className3}
+			/>
+		</svg>
+	);
+};
+
+/*
 		<svg
 			width={width}
 			height={height}
@@ -113,8 +140,7 @@ export const ArIcon: SvgIcon = (props): JSX.Element => {
 				className={className3}
 			/>
 		</svg>
-	);
-};
+*/
 
 // SVGSVGElement
 // https://developer.aliyun.com/mirror/npm/package/next-plugin-svgr
