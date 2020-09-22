@@ -1,12 +1,18 @@
-import Meta from '../components/meta';
+import Head from 'next/head';
+import Lead from 'components/lead';
+import Footer from 'components/footer';
 import { Fragment } from 'react';
 import { MediaContextProvider } from 'components/window-width';
+import { CLIENT_NAME } from 'lib/constants';
 const Index = () => {
 	return (
 		<Fragment>
 			<MediaContextProvider>
-				<Meta />
-				<div className='dark:text-white dark:bg-black text-black'>True</div>
+				<Lead />
+				<Head>
+					<title>{`${CLIENT_NAME} landing page`}</title>
+				</Head>
+				<Footer />
 			</MediaContextProvider>
 		</Fragment>
 	);
