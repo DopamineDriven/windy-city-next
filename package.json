@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 5000",
     "build": "next build",
     "start": "next start",
     "postinstall": "npx patch-package"

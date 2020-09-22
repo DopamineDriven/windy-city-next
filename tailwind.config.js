@@ -1,12 +1,15 @@
+// const plugin = require('tailwindcss/plugin')
+
 module.exports = {
 	important: true,
 	future: {
-		removeDeprecatedGapUtilities: true
+		removeDeprecatedGapUtilities: true,
+		purgeLayersByDefault: true
 	},
 	purge: {
 		content: ['./components/**/*.tsx', './pages/**/*.tsx'],
 		options: {
-			whiteList: ['dark-mode']
+			whiteList: ['dark-mode', 'light-mode']
 		}
 	},
 	theme: {
@@ -20,9 +23,12 @@ module.exports = {
 		},
 		rotate: {
 			0: '0deg',
+			40: '40deg',
 			45: '45deg',
+			125: '125deg',
 			180: '180deg',
-			855: '855deg'
+			290: '310deg',
+			855: '845deg'
 		},
 		opacity: {
 			10: '10',
@@ -65,8 +71,9 @@ module.exports = {
 				}
 			},
 			animation: {
-				wiggle: 'wiggle 1s ease-in-out infinite',
-				hero: 'hero 1s ease-in-out infinite'
+				wiggle: 'wiggle 10s ease-in-out infinite',
+				hero: 'hero 1s ease-in-out infinite',
+				slowPing: 'pulse 10s cubic-bezier(0, 0, 0.2, 1) infinite'
 			},
 			fontFamily: {
 				head: ['goudy-bookletter-1911', 'serif'],
@@ -79,14 +86,27 @@ module.exports = {
 				// somaDisplayLight: ['neue-haas-grotesk-display', 'sans-serif']
 				// subpolished: ['Montserrat', 'sans-serif']
 			},
-			// backgroundColor: {
-			// 	primary: 'var(--color-bg-primary)'
-			// },
-			// textColor: {
-			// 	accent: 'var(--color-text-accent)',
-			// 	primary: 'var(--color-text-primary)',
-			// 	secondary: 'var(--color-text-secondary)'
-			// },
+			backgroundColor: {
+				primary: 'var(--color-bg-primary)',
+				auxiliary: 'var(--color-bg-auxiliary)'
+			},
+			textColor: {
+				accent: 'var(--color-text-accent)',
+				primary: 'var(--color-text-primary)',
+				auxiliary: 'var(--color-text-auxiliary)',
+				tertiary: 'var(--color-text-tertiary)',
+				quaternary: 'var(--color-text-quaternary)'
+			},
+			borderColor: {
+				primary: 'var(--color-border-primary)'
+			},
+			fill: {
+				primary: 'var(--color-fill-primary)',
+				auxiliary: 'var(--color-fill-auxiliary)'
+			},
+			strokeColor: {
+				primary: 'var(--color-stroke-primary)'
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -349,6 +369,7 @@ module.exports = {
 				customPostAbout: '7.5666vw',
 				customPostBlog: '7.7666vw',
 				customSubPostTitle: '11.9276vw',
+				customSubPostTitleModified: '8.9276vw',
 				customAboutSubMobile: '2.63333vw',
 				customBlogSupraTitle: '8.9276vw'
 			},
@@ -357,7 +378,8 @@ module.exports = {
 				medium: '0 8px 30px rgba(0, 0, 0, 0.12)'
 			}
 		},
-		darkSelector: '.dark'
+		darkSelector: '.dark',
+		lightSelector: '.light'
 	},
 	variants: {
 		padding: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
