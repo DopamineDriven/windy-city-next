@@ -5,7 +5,7 @@ import Document, {
 	NextScript,
 	DocumentContext
 } from 'next/document';
-import { mediaStyles } from '../components/window-width';
+import { mediaStyles } from 'components/window-width';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
 					<link rel='stylesheet' href='https://use.typekit.net/cub6off.css' />
 					<style type='text/css' dangerouslySetInnerHTML={{ __html: mediaStyles }} />
 					{/* Global Site Tag (gtag.js) - Google Analytics */}
-					{/* <script
+					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=UA-${process.env.GA_TRACKING_ID}`}
 					/>
@@ -36,10 +36,10 @@ export default class MyDocument extends Document {
             });
           `
 						}}
-					/> */}
+					/>
 				</Head>
-				<body className='block'>
-					{/* <script src='./noflash.js' /> */}
+				<body className='root transition-colors duration-1000 transform ease-in-out'>
+					<script src='public/noflash.js' />
 					<Main />
 					<NextScript />
 				</body>
