@@ -352,6 +352,8 @@ module.exports = {
 				'8xl': '6.25rem',
 				'10xl': '10rem',
 				custom: '25.41667vw',
+				customWcd: '13.41667vw',
+				customWcdMobile: '10.11667vw',
 				customPMobile: '4.44681vw',
 				customP: '3.2234vw',
 				customS: '2.06667vw',

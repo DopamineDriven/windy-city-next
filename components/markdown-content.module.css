@@ -1,0 +1,116 @@
+
+.markdown {
+	@apply text-customSM px-portfolioPadding text-primary bg-primary stroke-current fill-current;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+	@apply my-6 text-customExcerpt;
+	@apply font-somaRoman;
+}
+
+.markdown h1 {
+	@apply font-somaRoman text-customPostAbout;
+}
+
+.markdown h2 {
+	@apply text-customExcerptMobile mt-aboutHackingFontAwesomePT mb-portfolio leading-snug font-somaRoman;
+}
+
+.markdown h3 {
+	@apply text-customSM mt-portfolio mb-portfolioRS leading-snug;
+}
+
+.markdown a {
+	@apply font-somaRoman;
+}
+
+.markdown a:hover {
+	@apply text-herokuStroke;
+}
+
+.markdown ul,
+.markdown ol {
+	@apply pl-4;
+}
+
+.markdown ul {
+	@apply list-disc;
+}
+
+.markdown ol {
+	@apply list-decimal;
+}
+
+.markdown ul > li > ul,
+.markdown ol > li > ol {
+	@apply my-0 ml-4;
+}
+
+.markdown ul > li > ul {
+	list-style: none;
+}
+
+.markdown pre {
+	@apply whitespace-pre overflow-x-auto p-4 text-customExcerpt leading-tight border border-gray-400 bg-gray-100 outline-none text-shadow-none;
+}
+
+.markdown code {
+	@apply text-customExcerpt;
+}
+
+.markdown style {
+}
+
+.markdown figcaption {
+	@apply text-center text-sm;
+}
+
+.markdown blockquote {
+	@apply border-l-4 border-gray-500 bg-gray-200 italic ml-0 py-4 px-6;
+}
+
+.markdown blockquote p {
+	@apply mt-0;
+}
+
+.markdown blockquote cite {
+	@apply not-italic;
+}
+
+.markdown audio {
+	@apply w-full;
+}
+
+.markdown img {
+	@apply block mx-auto py-portfolio;
+}
+
+@media (max-width: 639px)  {
+	.markdown p,
+	.markdown ul,
+	.markdown ol,
+	.markdown blockquote,
+	.markdown code  {
+		@apply my-portfolio text-customExcerptMobile;
+		@apply font-somaRoman;
+	}
+	.markdown pre,
+	.markdown span {
+		@apply text-customExcerptMobile;
+	}
+	/* .markdown span:last-child {
+		@apply text-customExcerpt;
+	} */
+	.markdown h2 {
+		@apply text-customTitleMobile mb-portfolio pt-aboutHackingFontAwesomePT leading-snug font-somaRoman;
+	}
+	.markdown h1 {
+		@apply font-somaRoman text-customPostAbout;
+	}
+	.markdown h4 {
+		@apply pt-portfolioLSMobile pb-portfolioRS text-customSMobile;
+	}
+}
