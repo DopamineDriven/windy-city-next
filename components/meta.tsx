@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 import { Fragment } from 'react';
 
-
-
 const MetaData = (): JSX.Element => {
+	const relCanonical = [`https://windycitydevs.io`, 'https://windycitydevs.com', 'https://windy-city-next.vercel.app']
+	console.log(relCanonical)
 	return (
 		<Fragment>
 			<Head>
@@ -12,34 +12,34 @@ const MetaData = (): JSX.Element => {
 					rel='apple-touch-icon'
 					type='img/png'
 					sizes='180x180'
-					href='/fav/apple-touch-icon.png'
+					href='/meta/apple-touch-icon.png'
 				/>
 				<link
 					rel='icon'
 					type='image/png'
 					sizes='32x32'
-					href='/fav/favicon-32x32.png'
+					href='/meta/favicon-32x32.png'
 				/>
 				<link
 					rel='icon'
 					type='image/png'
 					sizes='16x16'
-					href='/fav/favicon-16x16.png'
+					href='/meta/favicon-16x16.png'
 				/>
-				<link rel='manifest' href='/fav/manifest.json' />
-				<link rel='mask-icon' href='/fav/safari-pinned-tab.svg' color='#000000' />
-				<link rel='shortcut icon' href='/fav/favicon.ico' />
-				<link rel='canonical' href='https://asross-portfolio.vercel.app/' />
+				<link rel='manifest' href='/meta/manifest.json' />
+				<link rel='mask-icon' href='/meta/safari-pinned-tab.svg' color='#000000' />
+				<link rel='shortcut icon' href='/meta/favicon.ico' />
+				<link rel='canonical' href={`${relCanonical}`} />
 				<meta name='robots' content='all' />
 				<meta
 					name='viewport'
 					content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5'
 				/>
 				<meta name='format-detection' content='telephone=no' />
-				<title>Andrew Ross — Full-Stack Engineer</title>
+				<title>Windy City Devs - Modernizing Your Web Presence</title>
 				<meta name='msapplication-TileColor' content='#000000' />
-				<meta name='msapplication-config' content='/fav/browserconfig.xml' />
-				<meta name='theme-color' content='#ffffff' />
+				<meta name='msapplication-config' content='/meta/browserconfig.xml' />
+				<meta name='theme-color' content='#000000' />
 				<link rel='alternate' type='application/rss+xml' href='/feed.xml' />
 				<meta
 					name='description'

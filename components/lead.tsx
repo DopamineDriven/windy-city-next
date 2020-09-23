@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Meta from 'components/meta';
-import LeadIcon from 'components/lead-arIcon';
+import LeadIcon from 'components/lead-wcdIcon';
 import LeadSpan from 'components/lead-span';
 import LeadSocial from 'components/lead-social';
 import LeadTitle from 'components/lead-title';
