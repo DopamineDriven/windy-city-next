@@ -110,7 +110,9 @@ module.exports = {
 			},
 			fill: {
 				primary: 'var(--color-fill-primary)',
-				auxiliary: 'var(--color-fill-auxiliary)'
+				auxiliary: 'var(--color-fill-auxiliary)',
+				tertiary: 'var(--color-fill-tertiary)',
+				quaternary: 'var(--color-fill-quaternary)'
 			},
 			strokeColor: {
 				primary: 'var(--color-stroke-primary)'

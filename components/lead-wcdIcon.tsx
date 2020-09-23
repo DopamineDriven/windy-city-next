@@ -1,4 +1,4 @@
-import { WcdIcon } from 'components/svg-icons';
+import { WcdIcon, WindyCityDevsIcon } from 'components/svg-icons';
 import Link from 'next/link';
 import { Media } from 'components/window-width';
 import { Fragment } from 'react';
@@ -55,13 +55,13 @@ const ArIconConditional = (): JSX.Element => {
 					id='top'
 					aria-label='top'
 				>
-					<WcdIcon
+					<WindyCityDevsIcon
 						width='10vw'
 						height='10vw'
 						classNames={[
-							` antialised w-svgIcon max-w-svgIcon transform transition-all`,
-							'  stroke-current',
-							` fill-primary`
+							` antialised w-svgIcon max-w-svgIcon transform transition-all`
+							// '  stroke-current',
+							// ` fill-primary`
 						]}
 					/>
 				</a>
