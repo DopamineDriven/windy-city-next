@@ -16,8 +16,9 @@ config.autoAddCss = false;
 
 function App({ Component, pageProps }: AppProps): ReactElement {
 	const router = useRouter();
-	const { logPageView } = gtag;
+	const { logPageView, gaInit } = gtag;
 	useEffect(() => {
+		gaInit();
 		const handleRouteChange = () => {
 			logPageView();
 		};
