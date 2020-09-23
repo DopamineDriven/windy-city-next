@@ -112,7 +112,9 @@ module.exports = {
 				primary: 'var(--color-fill-primary)',
 				auxiliary: 'var(--color-fill-auxiliary)',
 				tertiary: 'var(--color-fill-tertiary)',
-				quaternary: 'var(--color-fill-quaternary)'
+				quaternary: 'var(--color-fill-quaternary)',
+				quinary: 'var(--color-fill-quaternary)',
+				senary: 'var(--color-fill-quaternary)'
 			},
 			strokeColor: {
 				primary: 'var(--color-stroke-primary)'
