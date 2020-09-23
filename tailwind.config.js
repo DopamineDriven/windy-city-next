@@ -50,10 +50,10 @@ module.exports = {
 			75: 75,
 			100: 100
 		},
-		scrollBehavior: {
-			immediately: 'auto',
-			smoothly: 'smooth'
-		},
+		// scrollBehavior: {
+		// 	immediately: 'auto',
+		// 	smoothly: 'smooth'
+		// },
 		extend: {
 			screens: {
 				light: { raw: '(prefers-color-scheme: light)' },
