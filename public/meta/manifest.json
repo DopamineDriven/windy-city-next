@@ -1,7 +1,7 @@
 {
 	"name": "Windy City Devs",
 	"short_name": "WCD",
-	"start_url": "https://windy-city-next.vercel.app",
+	"start_url": "https://windycitydevs.io",
 	"icons": [
 		{
 			"src": "/meta/android-chrome-192x192.png",
