@@ -1,6 +1,15 @@
 # windy-city-next
 
+## TypeScript Maniplating React Prop Types
+
+- https://medium.com/@rossbulat/typescript-react-manipulating-prop-types-ec13f841a550
+
+## TypeScript Generics
+
+- https://medium.com/@rossbulat/typescript-generics-explained-15c6493b510f
+
 ## nextjs-page-transitions
+
 - https://github.com/wrongakram/nextjs-page-transitions
 
 ## Configure method to reveal user ISP
