@@ -422,5 +422,10 @@ module.exports = {
 				}
 			});
 		}
-	]
+	],
+	corePlugins: {
+		preflight: false
+	}
 };
+
+// https://tailwindcss.com/docs/configuration#core-plugins
