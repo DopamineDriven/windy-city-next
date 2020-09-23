@@ -12,7 +12,10 @@ export default class MyDocument extends Document {
 		const initialProps = await Document.getInitialProps(ctx);
 		return { ...initialProps };
 	}
+
 	render() {
+		const debugScreensDev =
+			process.env.NODE_ENV === 'development' ? ' debug-screens' : '';
 		return (
 			<Html lang='en-US'>
 				<Head>
@@ -38,8 +41,10 @@ export default class MyDocument extends Document {
 						}}
 					/>
 				</Head>
-				<body className='root transition-colors duration-1000 transform ease-in-out'>
-					<script src='public/noflash.js' />
+				<body
+					className={`transition-colors duration-1000 ease-in-out transform root ${debugScreensDev}`}
+				>
+					<script src='/noflash.js' />
 					<Main />
 					<NextScript />
 				</body>

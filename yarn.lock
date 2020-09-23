@@ -7545,6 +7545,11 @@ tailwindcss-dark-mode@^1.1.6:
   dependencies:
     tailwindcss "^1.6.2"
 
+tailwindcss-debug-screens@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-debug-screens/-/tailwindcss-debug-screens-1.1.0.tgz#06fece005d925e33a384309995af3900faeccb8b"
+  integrity sha512-5gZ0I0WJR0EF+fhY5cQJnriQDfzgv5HUd0p0qDNPTUkcc9HpfAlLZ/WXWvQnWKtkd0tQOPbwEaM5/LUIC8kAAQ==
+
 tailwindcss-gradients@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/tailwindcss-gradients/-/tailwindcss-gradients-3.0.0.tgz#aabcff1ec9afd7d09ffc2af82e8e4113412bd088"

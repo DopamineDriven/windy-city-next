@@ -1,6 +1,41 @@
 # windy-city-next
 
-## Important!
+## WebManifest and fa
+
+- **very useful**
+- https://favicon.io/favicon-converter/
+- https://app-manifest.firebaseapp.com/ 
+- https://w3c.github.io/manifest/
+
+## Top Tailwind CSS Plugins
+
+- https://www.telerik.com/blogs/top-15-tailwind-css-plugins-resources
+- https://github.com/jorenvanhee/tailwindcss-debug-screens
+
+## TypeScript Maniplating React Prop Types
+
+- https://medium.com/@rossbulat/typescript-react-manipulating-prop-types-ec13f841a550
+
+## TypeScript Generics
+
+- https://medium.com/@rossbulat/typescript-generics-explained-15c6493b510f
+
+## nextjs-page-transitions
+
+- https://github.com/wrongakram/nextjs-page-transitions
+
+## Configure method to reveal user ISP
+
+- https://www.3whitehats.com/knowledge/how-to-get-service-provider-back-in-google-analytics
+
+## Google Analytics Added
+
+- https://github.com/react-ga/react-ga
+- https://github.com/react-ga/react-ga/blob/master/demo/app/Events.jsx
+- https://coderrocketfuel.com/article/add-google-analytics-to-a-next-js-and-react-website
+- https://analytics.google.com/analytics/web/#/a177780141w246030893p228624158/admin/tracking/tracking-code/
+
+## Important
 
 - Do not update autoprefixer to version 10 or higher
 - Why?

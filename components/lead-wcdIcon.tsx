@@ -9,7 +9,7 @@ const ArIconConditional = (): JSX.Element => {
 		<Media at='xs'>
 			<Link href='/'>
 				<a
-					className='container block transform transition-transform translate-x-aboutHackingFontAwesomePT py-portfolio justify-center mx-auto w-full min-w-full'
+					className='container justify-center block w-full min-w-full mx-auto transition-transform transform translate-x-aboutHackingFontAwesomePT py-portfolio'
 					id='top'
 					aria-label='top'
 				>
@@ -23,7 +23,7 @@ const ArIconConditional = (): JSX.Element => {
 		<Media at='sm'>
 			<Link href='/'>
 				<a
-					className='container block pl-portfolio pt-portfolio justify-between mx-auto w-full min-w-full '
+					className='container justify-between block w-full min-w-full mx-auto pl-portfolio pt-portfolio '
 					id='top'
 					aria-label='top'
 				>
@@ -37,7 +37,7 @@ const ArIconConditional = (): JSX.Element => {
 		<Media at='md'>
 			<Link href='/'>
 				<a
-					className='container block pl-portfolio pt-portfolio justify-between mx-auto w-full min-w-full '
+					className='container justify-between block w-full min-w-full mx-auto pl-portfolio pt-portfolio '
 					id='top'
 					aria-label='top'
 				>
@@ -51,7 +51,7 @@ const ArIconConditional = (): JSX.Element => {
 		<Media greaterThan='md'>
 			<Link href='/'>
 				<a
-					className='container block pl-portfolio pt-portfolio justify-between mx-auto w-full min-w-full'
+					className='container justify-between block w-full min-w-full mx-auto pl-portfolio pt-portfolioRS'
 					id='top'
 					aria-label='top'
 				>
@@ -70,14 +70,14 @@ const ArIconConditional = (): JSX.Element => {
 	);
 
 	const DarkModeToggler = (): JSX.Element => (
-		<div className='md:pt-portfolio md:text-customTitle transition-all transform md:-translate-y-mdmxSocial translate-y-portfolioLSMobile col-span-4 text-right -translate-x-portfolioPadding'>
+		<div className='col-span-4 text-right transition-all transform md:pt-portfolio md:text-customTitle md:-translate-y-mdmxSocial translate-y-portfolioLSMobile -translate-x-portfolioPadding'>
 			<DarkMode />
 		</div>
 	);
 
 	const ArIconsCoalesced = (): JSX.Element => (
 		<Fragment>
-			<div className='relative block justify-between lg:w-auto lg:static lg:block lg:justify-start transition-all w-full min-w-full col-span-2'>
+			<div className='relative justify-between block w-full min-w-full col-span-2 transition-all lg:w-auto lg:static lg:block lg:justify-start'>
 				{arIconXs}
 				{arIconSm}
 				{arIconMd}
@@ -87,7 +87,7 @@ const ArIconConditional = (): JSX.Element => {
 	);
 	return (
 		<Fragment>
-			<div className='select-none relative z-1 justify-between pt-portfolioDivider navbar-expand-lg grid grid-cols-6 min-w-full w-full container overflow-y-hidden overflow-x-hidden transform'>
+			<div className='container relative grid justify-between w-full min-w-full grid-cols-6 overflow-x-hidden overflow-y-hidden transform select-none -translate-y-portfolio z-1 navbar-expand-lg'>
 				<ArIconsCoalesced />
 				<DarkModeToggler />
 			</div>
