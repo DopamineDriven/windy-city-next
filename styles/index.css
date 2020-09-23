@@ -77,65 +77,12 @@ body::-webkit-scrollbar {
 
 @tailwind base;
 /* Write custom base styles here */
-/* @font-face {
-	font-family: 'Barlow Condensed', sans-serif;
-	font-weight: 400;
-	src: url(https://fonts.googleapis.com/css2?family=Barlow%20Condensed&family=Barlow%20Semi%20Condensed&display=swap)
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'brandon-grotesque', sans-serif;
-	font-weight: 400;
-	src: url(https://use.typekit.net/hzg4mdi.css) format('woff2');
-}
-
-@font-face {
-	font-family: 'Montserrat', 'sans-serif';
-	font-weight: 400;
-	src: url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)
-		format('woff2');
-}
-
-@font-face {
-	font-family: 'Playfair Display', serif;
-	font-weight: 500;
-	src: url(https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@500&display=swap)
-		format('woff2');
-} */
-
-@font-face {
-	font-family: 'goudy-bookletter-1911', serif;
-	font-weight: 400;
-	src: url(https://use.typekit.net/cub6off.css) format('woff2');
-}
-
-@font-face {
-	font-family: 'neue-haas-grotesk-text', sans-serif;
-	font-weight: 400;
-	src: url(https://use.typekit.net/cub6off.css) format('woff2');
-}
-
-@font-face {
-	font-family: 'neue-haas-grotesk-display', sans-serif;
-	font-weight: 400;
-	src: url(https://use.typekit.net/cub6off.css) format('woff2');
-}
-
-/* @font-face {
-	font-family: 'neue-haas-grotesk-display', sans-serif;
-	font-weight: 300;
-	src: url(https://use.typekit.net/sbg1kws.css) format('woff2');
-} */
 
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
 
 /* Write custom component styles here */
-/* @ {
-	text-shadow: 'none';
-} */
 
 /* Start purging... */
 @tailwind utilities;
