@@ -20,6 +20,7 @@ interface SvgIconConstituentValues {
   classNames?: string[];
   style0?: CSSProperties;
   style1?: CSSProperties;
+  style2?: CSSProperties;
 }
 
 export default SvgIconConstituentValues;

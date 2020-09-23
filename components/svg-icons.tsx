@@ -274,7 +274,12 @@ export const WindyCityDevsLogo: SvgIcon = (props): JSX.Element => {
 export const WindyCityDevsIcon: SvgIcon = (props): JSX.Element => {
 	const {
 		width = '',
-		height = '',
+    height = '',
+    circWidth = '',
+    circHeight = '',
+    rectWidth = '',
+    rectHeight = '',
+    style0 = '',
 		classNames = [],
 		fillColor = [],
 		strokeFill = [],

@@ -385,7 +385,8 @@ module.exports = {
 	},
 	variants: {
 		padding: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
-		fontSize: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd']
+		fontSize: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
+		animation: ['responsive', 'hover', 'focus', 'motion-safe', 'motion-reduce']
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
