@@ -50,7 +50,7 @@ const LeadSpan = (): JSX.Element => {
 	const spanMap: JSX.Element[] = spanSnippets.map(constituent => {
 		return (
 			<span
-				className='font-thin font-somaRoman tracking-tighter cursor-default md:text-justify'
+				className='font-thin tracking-tighter cursor-default font-somaRoman md:text-justify'
 				key={constituent.id}
 			>
 				{constituent.span}
@@ -59,9 +59,8 @@ const LeadSpan = (): JSX.Element => {
 		);
 	});
 	return (
-		<p className='transform -translate-y-landingOverviewTranslation transition-all text-customExcerptMobile md:text-customP pr-portfolioRS md:pl-portfolioLS pl-portfolioLSMobile leading-headerP block font-somaRoman tracking-tighter font-thin ease-in-out'>
-			Hallo this is Windy City Devs. Want us dark n naughty? We got you covered.
-			Want us angelic & wHolesome? Joe's body is ready. 👼 
+		<p className='block font-thin tracking-tighter transition-all ease-in-out transform -translate-y-landingOverviewTranslation text-customExcerptMobile md:text-customP pr-portfolioRS md:pl-portfolioLS pl-portfolioLSMobile leading-headerP font-somaRoman'>
+			Under Construction 🚧
 		</p>
 	);
 };
