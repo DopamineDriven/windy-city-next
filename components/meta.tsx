@@ -3,8 +3,11 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 import { Fragment } from 'react';
 
 const MetaData = (): JSX.Element => {
-	const relCanonical = [`https://windycitydevs.io`, 'https://windycitydevs.com', 'https://windy-city-next.vercel.app']
-	console.log(relCanonical)
+	// const relCanonical = [
+	// 	`https://windycitydevs.io`,
+	// 	'https://windycitydevs.com',
+	// 	'https://windy-city-next.vercel.app'
+	// ];
 	return (
 		<Fragment>
 			<Head>
@@ -29,7 +32,7 @@ const MetaData = (): JSX.Element => {
 				<link rel='manifest' href='/meta/manifest.json' />
 				<link rel='mask-icon' href='/meta/safari-pinned-tab.svg' color='#000000' />
 				<link rel='shortcut icon' href='/meta/favicon.ico' />
-				<link rel='canonical' href={`${relCanonical}`} />
+				<link rel='canonical' href='https://windy-city-next.vercel.app' />
 				<meta name='robots' content='all' />
 				<meta
 					name='viewport'
@@ -61,7 +64,7 @@ const MetaData = (): JSX.Element => {
 				<meta name='twitter:image' content={HOME_OG_IMAGE_URL} />
 				<meta name='twitter:creator' content='@Dopamine_Driven' />
 				<meta property='og:type' content='website' />
-				<meta property='og:url' content='https://asross-portfolio.vercel.app/' />
+				<meta property='og:url' content='https://andrewross.dev/' />
 				<meta property='og:title' content='Andrew Ross — Full-Stack Engineer' />
 				<meta
 					property='og:description'
