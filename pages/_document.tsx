@@ -20,7 +20,6 @@ export default class MyDocument extends Document {
 			<Html lang='en-US'>
 				<Head>
 					<meta charSet='utf-8' />
-					{/* <link rel='preconnect' href='https://use.typekit.net/cub6off.css' /> */}
 					<link rel='stylesheet' href='/fonts/style.css' />
 					<style type='text/css' dangerouslySetInnerHTML={{ __html: mediaStyles }} />
 					{/* Global Site Tag (gtag.js) - Google Analytics */}

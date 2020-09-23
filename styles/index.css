@@ -1,7 +1,7 @@
 /*
 https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth#:~:text=WebKit%20implements%20a%20similar%20property,%2Dwebkit%2Dfont%2Dsmoothing%20.&text=antialiased%20%2D%20Smooth%20the%20font%20on,backgrounds%20makes%20it%20look%20lighter.
 */
-
+/* purgecss start ignore */
 .light-mode {
 	@apply bg-portfolio text-black border-black;
 	--color-bg-primary: #ebe8e0;
@@ -47,17 +47,6 @@ html {
 	text-shadow: none;
 }
 
-/* ::-moz-selection {
-	text-shadow: none;
-	background: #333;
-	color: #fff;
-}
-::selection {
-	text-shadow: none;
-	background: #333;
-	color: #fff;
-} */
-
 #__next {
 	margin: 0;
 	padding: 0;
@@ -81,6 +70,7 @@ body::-webkit-scrollbar {
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
+/* purgecss end ignore */
 
 /* Write custom component styles here */
 
