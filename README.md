@@ -1,6 +1,17 @@
 # windy-city-next
 
-## Important!
+## Configure method to reveal user ISP
+
+- https://www.3whitehats.com/knowledge/how-to-get-service-provider-back-in-google-analytics
+
+## Google Analytics Added
+
+- https://github.com/react-ga/react-ga
+- https://github.com/react-ga/react-ga/blob/master/demo/app/Events.jsx
+- https://coderrocketfuel.com/article/add-google-analytics-to-a-next-js-and-react-website
+- https://analytics.google.com/analytics/web/#/a177780141w246030893p228624158/admin/tracking/tracking-code/
+
+## Important
 
 - Do not update autoprefixer to version 10 or higher
 - Why?
