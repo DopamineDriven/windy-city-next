@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
 					/>
 				</Head>
 				<body
-					className={`transition-colors duration-1000 ease-in-out transform root ${debugScreensDev}`}
+					className={`transition-colors duration-1000 ease-in-out motion-safe:animate-hero transform root ${debugScreensDev}`}
 				>
 					<script src='/noflash.js' />
 					<Main />
