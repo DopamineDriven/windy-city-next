@@ -61,7 +61,7 @@ const LeadSpan = (): JSX.Element => {
 	return (
 		<p className='transform -translate-y-landingOverviewTranslation transition-all text-customExcerptMobile md:text-customP pr-portfolioRS md:pl-portfolioLS pl-portfolioLSMobile leading-headerP block font-somaRoman tracking-tighter font-thin ease-in-out'>
 			Hallo this is Windy City Devs. Want us dark n naughty? We got you covered.
-			Want us angelic & wHolesome? Our CEO's body is ready.
+			Want us angelic & wHolesome? Joe's body is ready. 👼 
 		</p>
 	);
 };
