@@ -1,5 +1,8 @@
 # windy-city-next
 
+## nextjs-page-transitions
+- https://github.com/wrongakram/nextjs-page-transitions
+
 ## Configure method to reveal user ISP
 
 - https://www.3whitehats.com/knowledge/how-to-get-service-provider-back-in-google-analytics
