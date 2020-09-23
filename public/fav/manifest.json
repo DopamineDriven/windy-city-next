@@ -1,7 +1,11 @@
 {
-	"name": "Next Portfolio",
-	"short_name": "Portfolio",
-	"start_url": "https://asross-portfolio.vercel.app/",
+	"name": "Windy City Devs",
+	"short_name": "WCD",
+	"start_url": [
+		"https://windy-city-next.vercel.app",
+		"https://windycitydevs.io",
+		"https://windycitydevs.com"
+	],
 	"icons": [
 		{
 			"src": "/fav/android-chrome-192x192.png",

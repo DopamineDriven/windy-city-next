@@ -13,6 +13,9 @@ module.exports = {
 		}
 	},
 	theme: {
+		debugScreens: {
+			position: ['bottom', 'left']
+		},
 		letterSpacing: {
 			tightest: '-.075em',
 			tighter: '-.024em',
@@ -402,6 +405,7 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/typography'),
 		require('tailwindcss-textshadow'),
+		require('tailwindcss-debug-screens'),
 		require('tailwindcss-dark-mode')(),
 		function ({ addBase, config }) {
 			addBase({

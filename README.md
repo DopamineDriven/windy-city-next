@@ -1,8 +1,15 @@
 # windy-city-next
 
+## WebManifest
+
+- **very useful**
+- https://app-manifest.firebaseapp.com/ 
+- https://w3c.github.io/manifest/
+
 ## Top Tailwind CSS Plugins
 
 - https://www.telerik.com/blogs/top-15-tailwind-css-plugins-resources
+- https://github.com/jorenvanhee/tailwindcss-debug-screens
 
 ## TypeScript Maniplating React Prop Types
 
