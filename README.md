@@ -1,8 +1,9 @@
 # windy-city-next
 
-## WebManifest
+## WebManifest and fa
 
 - **very useful**
+- https://favicon.io/favicon-converter/
 - https://app-manifest.firebaseapp.com/ 
 - https://w3c.github.io/manifest/
 

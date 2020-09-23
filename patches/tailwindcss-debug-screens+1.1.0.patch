@@ -1,0 +1,14 @@
+diff --git a/node_modules/tailwindcss-debug-screens/index.js b/node_modules/tailwindcss-debug-screens/index.js
+index 1a4b0d6..2a1e702 100644
+--- a/node_modules/tailwindcss-debug-screens/index.js
++++ b/node_modules/tailwindcss-debug-screens/index.js
+@@ -10,7 +10,8 @@ module.exports = function ({ addComponents, theme }) {
+ 
+   const components = {
+     '.debug-screens::before': Object.assign({
+-      position: 'fixed',
++      position: 'sticky',
++      height: '100%',
+       zIndex: '2147483647',
+       [positionY]: '0',
+       [positionX]: '0',
