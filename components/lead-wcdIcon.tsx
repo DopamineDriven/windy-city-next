@@ -13,7 +13,15 @@ const ArIconConditional = (): JSX.Element => {
 					id='top'
 					aria-label='top'
 				>
-					<WcdIcon width='18vw' height='18vw' />
+					<WindyCityDevsIcon
+						width='18vw'
+						height='18vw'
+						classNames={[
+							` antialised w-svgIcon max-w-svgIcon transform transition-all`
+							// '  stroke-current',
+							// ` fill-primary`
+						]}
+					/>
 				</a>
 			</Link>
 		</Media>
@@ -27,7 +35,15 @@ const ArIconConditional = (): JSX.Element => {
 					id='top'
 					aria-label='top'
 				>
-					<WcdIcon width='15vw' height='15vw' />
+					<WindyCityDevsIcon
+						width='15vw'
+						height='15vw'
+						classNames={[
+							` antialised w-svgIcon max-w-svgIcon transform transition-all`
+							// '  stroke-current',
+							// ` fill-primary`
+						]}
+					/>
 				</a>
 			</Link>
 		</Media>
@@ -41,7 +57,15 @@ const ArIconConditional = (): JSX.Element => {
 					id='top'
 					aria-label='top'
 				>
-					<WcdIcon width='12.5vw' height='12.5vw' />
+					<WindyCityDevsIcon
+						width='12vw'
+						height='12vw'
+						classNames={[
+							` antialised w-svgIcon max-w-svgIcon transform transition-all`
+							// '  stroke-current',
+							// ` fill-primary`
+						]}
+					/>
 				</a>
 			</Link>
 		</Media>
