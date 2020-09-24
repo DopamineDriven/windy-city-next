@@ -1,4 +1,27 @@
 # windy-city-next
+- https://windycitydevs.io
+
+## Domains redirecting to .io 
+- https://www.windycitydevs.io
+- https://windycitydevs.llc
+- https://windycitydevs.llc
+- https://windycitydevs.app
+- https://www.windycitydevs.app
+- https://windycitydevs.dev
+- https://www.windycitydevs.dev
+- https://windycitydevs.digital
+- https://www.windycitydevs.digital
+- https://windycitydevs.com
+- https://www.windycitydevs.com
+- https://windycitydevs.co
+- https://www.windycitydevs.co
+- https://windycitydevs.net
+- https://www.windycitydevs.net
+- https://windycitydevs.tech
+- https://www.windycitydevs.tech
+- https://windycitydevs.wtf
+- https://www.windycitydevs.wtf
+- https://windy-city-next.vercel.app
 
 ## WebManifest and fa
 
