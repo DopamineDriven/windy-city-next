@@ -16,6 +16,15 @@ interface SvgIconConstituentValues {
   circY?: string;
 	width?: string;
 	height?: string;
+	classNameP1?: string;
+	classNameP2?: string;
+	classNameP3?: string;
+	classNameP4?: string;
+	classNameP5?: string;
+	classNameP6?: string;
+	classNameP7?: string;
+	classNameP8?: string;
+	classNameP9?: string;
 	rotateCenter?: number;
   classNames?: string[];
   style0?: CSSProperties;
