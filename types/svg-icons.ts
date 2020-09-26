@@ -1,19 +1,19 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ChangeEvent } from 'react';
 interface SvgIconConstituentValues {
 	strokeColor?: string[];
 	strokeWidth?: string[];
 	strokeFill?: string[];
 	fillColor?: string[];
 	imageWidth?: string;
-  imageHeight?: string;
-  rectWidth?: string;
-  rectHeight?: string;
-  rectX?: string;
-  rectY?: string;
-  circWidth?: string;
-  circHeight?: string;
-  circX?: string;
-  circY?: string;
+	imageHeight?: string;
+	rectWidth?: string;
+	rectHeight?: string;
+	rectX?: string;
+	rectY?: string;
+	circWidth?: string;
+	circHeight?: string;
+	circX?: string;
+	circY?: string;
 	width?: string;
 	height?: string;
 	classNameP1?: string;
@@ -26,13 +26,17 @@ interface SvgIconConstituentValues {
 	classNameP8?: string;
 	classNameP9?: string;
 	rotateCenter?: number;
-  classNames?: string[];
-  style0?: CSSProperties;
-  style1?: CSSProperties;
-  style2?: CSSProperties;
+	classNames?: string[];
+	style0?: CSSProperties;
+	style1?: CSSProperties;
+	style2?: CSSProperties;
+	onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default SvgIconConstituentValues;
+
+// for the setState property of useState
+// 	setTheme: Dispatch<SetStateAction<string>>;
 
 // Variadic Tuple Types
 // https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/
