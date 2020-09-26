@@ -12,7 +12,7 @@ const LeadDarkModeConditional = (): JSX.Element => {
 				<DarkModeSwitch
 					onChange={darkMode.toggle}
 					checked={true}
-					className='fill-primary text-primary stroke-current outline-none transform transition-colors rotate-290'
+					className='transition-colors transform outline-none stroke-current fill-primary text-primary rotate-290'
 					width='9vw'
 					height='9vw'
 				/>
@@ -22,7 +22,7 @@ const LeadDarkModeConditional = (): JSX.Element => {
 				<DarkModeSwitch
 					onChange={darkMode.toggle}
 					checked={false}
-					className='fill-current text-primary text-customTitle stroke-current transition-colors transform outline-none rotate-855'
+					className='transition-colors transform outline-none fill-current stroke-current text-primary text-customTitle rotate-855'
 					width='9vw'
 					height='9vw'
 				/>
@@ -36,7 +36,7 @@ const LeadDarkModeConditional = (): JSX.Element => {
 				<DarkModeSwitch
 					onChange={darkMode.toggle}
 					checked={true}
-					className='fill-primary text-primary stroke-current outline-none transform transition-colors rotate-290'
+					className='transition-colors transform outline-none stroke-current fill-primary text-primary rotate-290'
 					width='6.5vw'
 					height='6.5vw'
 				/>
@@ -46,7 +46,7 @@ const LeadDarkModeConditional = (): JSX.Element => {
 				<DarkModeSwitch
 					onChange={darkMode.toggle}
 					checked={false}
-					className='fill-current text-primary text-customTitle stroke-current transition-colors transform outline-none rotate-855'
+					className='transition-colors transform outline-none fill-current stroke-current text-primary text-customTitle rotate-855'
 					width='6vw'
 					height='6vw'
 				/>
@@ -56,7 +56,7 @@ const LeadDarkModeConditional = (): JSX.Element => {
 
 	return (
 		<Fragment>
-			<div className='align-top inline-block md:transform md:-translate-y-portfolioDivider'>
+			<div className='inline-block align-top md:transform md:-translate-y-portfolioDivider'>
 				<DarkMobile />
 				<DarkDesktop />
 			</div>

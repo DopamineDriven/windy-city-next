@@ -59,7 +59,7 @@ const LeadSpan = (): JSX.Element => {
 		);
 	});
 	return (
-		<p className='block font-thin tracking-tighter transition-all ease-in-out transform -translate-y-landingOverviewTranslation text-customExcerptMobile md:text-customP pr-portfolioRS md:pl-portfolioLS pl-portfolioLSMobile leading-headerP font-somaRoman'>
+		<p className='block font-thin tracking-tighter text-center transition-all ease-in-out transform -translate-y-landingOverviewTranslation text-customExcerptMobile md:text-customP pr-portfolioRS md:pl-portfolioLS pl-portfolioLSMobile leading-headerP font-somaRoman'>
 			Under Construction 🚧
 		</p>
 	);
