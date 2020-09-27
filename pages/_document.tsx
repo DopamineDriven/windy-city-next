@@ -3,17 +3,20 @@ import Document, {
 	Head,
 	Main,
 	NextScript,
-	DocumentContext
+	DocumentContext,
+	DocumentInitialProps
 } from 'next/document';
 import { mediaStyles } from 'lib/window-width';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
-		const initialProps = await Document.getInitialProps(ctx);
+		const initialProps: DocumentInitialProps = await Document.getInitialProps(
+			ctx
+		);
 		return { ...initialProps };
 	}
 
-	render() {
+	render(): JSX.Element {
 		const debugScreensDev =
 			process.env.NODE_ENV === 'development' ? ' debug-screens' : '';
 		return (
