@@ -1,0 +1,13 @@
+# Ignore Artifacts
+node_modules
+.next
+.vercel
+.vscode
+yarn-error.log
+yarn.lock
+patches
+public
+.VSCodeCounter
+_about
+_blog
+_posts

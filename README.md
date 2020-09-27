@@ -1,7 +1,9 @@
 # windy-city-next
+
 - https://windycitydevs.io
 
-## Domains redirecting to .io 
+## Domains redirecting to .io
+
 - https://www.windycitydevs.io
 - https://windycitydevs.llc
 - https://windycitydevs.llc
@@ -27,7 +29,7 @@
 
 - **very useful**
 - https://favicon.io/favicon-converter/
-- https://app-manifest.firebaseapp.com/ 
+- https://app-manifest.firebaseapp.com/
 - https://w3c.github.io/manifest/
 
 ## Top Tailwind CSS Plugins
