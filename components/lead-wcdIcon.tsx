@@ -1,6 +1,6 @@
 import { WcdIcon, WindyCityDevsIcon } from 'components/svg-icons';
 import Link from 'next/link';
-import { Media } from 'components/window-width';
+import { Media } from 'lib/window-width';
 import { Fragment } from 'react';
 import DarkMode from 'components/lead-dark-mode';
 

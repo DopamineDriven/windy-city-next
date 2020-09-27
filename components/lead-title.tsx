@@ -1,4 +1,4 @@
-import { Media } from 'components/window-width';
+import { Media } from 'lib/window-width';
 import { Fragment } from 'react';
 
 const LeadTitle = (): JSX.Element => {

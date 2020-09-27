@@ -3,17 +3,20 @@ import Document, {
 	Head,
 	Main,
 	NextScript,
-	DocumentContext
+	DocumentContext,
+	DocumentInitialProps
 } from 'next/document';
-import { mediaStyles } from 'components/window-width';
+import { mediaStyles } from 'lib/window-width';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
-		const initialProps = await Document.getInitialProps(ctx);
+		const initialProps: DocumentInitialProps = await Document.getInitialProps(
+			ctx
+		);
 		return { ...initialProps };
 	}
 
-	render() {
+	render(): JSX.Element {
 		const debugScreensDev =
 			process.env.NODE_ENV === 'development' ? ' debug-screens' : '';
 		return (
@@ -41,7 +44,7 @@ export default class MyDocument extends Document {
 					/>
 				</Head>
 				<body
-					className={`transition-colors duration-1000 ease-in-out motion-safe:animate-hero transform root ${debugScreensDev}`}
+					className={`transition-colors duration-1000 ease-in-out transform root ${debugScreensDev}`}
 				>
 					<script src='/noflash.js' />
 					<Main />

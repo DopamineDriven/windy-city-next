@@ -1,5 +1,5 @@
 diff --git a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
-index b70b000..a70f0ed 100644
+index b70b000..99f02b4 100644
 --- a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
 +++ b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
 @@ -1,4 +1,4 @@
@@ -8,7 +8,7 @@ index b70b000..a70f0ed 100644
  export type IconPathData = string | string[]
  
  export interface IconLookup {
-@@ -22,6 +22,29 @@ export interface IconPack {
+@@ -22,6 +22,30 @@ export interface IconPack {
  }
  
  export type IconName = '500px' | 
@@ -34,7 +34,8 @@ index b70b000..a70f0ed 100644
 +  'vercel-icon' | 
 +  'vim-icon' | 
 +  'tailwind-icon' | 
-+  'typescript-icon' | 
++  'typescript-icon' |  
++  'website-icon' |    
    'accessible-icon' | 
    'accusoft' | 
    'acquisitions-incorporated' | 

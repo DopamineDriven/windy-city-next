@@ -9,10 +9,9 @@ module.exports = {
 	plugins: [
 		'tailwindcss',
 		'autoprefixer',
-		'postcss-flexbugs-fixes'
-		// ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
-		[
-			'postcss-preset-env',
+		'postcss-flexbugs-fixes'[
+			// ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
+			('postcss-preset-env',
 			{
 				autoprefixer: {
 					flexbox: 'no-2009'
@@ -21,7 +20,7 @@ module.exports = {
 				features: {
 					'custom-properties': false
 				}
-			}
+			})
 		]
 	]
 };

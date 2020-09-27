@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Lead from 'components/lead';
 import Footer from 'components/footer';
 import { Fragment } from 'react';
-import { MediaContextProvider } from 'components/window-width';
+import { MediaContextProvider } from 'lib/window-width';
 import { CLIENT_NAME } from 'lib/constants';
 const Index = () => {
 	return (
