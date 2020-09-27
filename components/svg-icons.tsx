@@ -307,7 +307,7 @@ export const WindyCityDevsIcon: SvgIcon = (props): JSX.Element => {
 		classNameP6 = ` fill-quinary`,
 		classNameP7 = ` fill-quinary`,
 		classNameP8 = ` fill-quinary`,
-		classNameP9 = ` fill-primary transition transform motion-safe:animate-pulse`,
+		classNameP9 = ` fill-primary transition transform motion-safe:animate-pulse animate-spinSlow`,
 		classNameP10 = ` fill-primary`,
 		classNameP11 = ` fill-quinary`,
 		classNameP12 = ``
@@ -321,7 +321,7 @@ export const WindyCityDevsIcon: SvgIcon = (props): JSX.Element => {
 			fill={fillColorNull}
 			xmlns='http://www.w3.org/2000/svg'
 			transform={`rotate(${rotateCenter}, 879, 1030)`}
-			className={classNameSVG + 'animate-spinSlow'}
+			className={classNameSVG}
 		>
 			<g filter='url(#filter0_d)'>
 				<g opacity='0.17'>
