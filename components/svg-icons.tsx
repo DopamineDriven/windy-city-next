@@ -321,7 +321,7 @@ export const WindyCityDevsIcon: SvgIcon = (props): JSX.Element => {
 			fill={fillColorNull}
 			xmlns='http://www.w3.org/2000/svg'
 			transform={`rotate(${rotateCenter}, 879, 1030)`}
-			className={classNameSVG}
+			className={classNameSVG + 'animate-spinSlow'}
 		>
 			<g filter='url(#filter0_d)'>
 				<g opacity='0.17'>
