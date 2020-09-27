@@ -1,5 +1,5 @@
 import useDarkMode, { DarkMode } from 'use-dark-mode';
-import { Media } from 'components/window-width';
+import { Media } from 'lib/window-width';
 import DarkModeSwitch from 'components/lead-dark-icons';
 import { Fragment } from 'react';
 

@@ -5,7 +5,7 @@ import Document, {
 	NextScript,
 	DocumentContext
 } from 'next/document';
-import { mediaStyles } from 'components/window-width';
+import { mediaStyles } from 'lib/window-width';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
