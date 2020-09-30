@@ -1,5 +1,9 @@
 # windy-city-next
 
+## Yosef
+
+- you can start adding md in `yosef.md` in the root for now
+
 - https://windycitydevs.io
 
 ## Domains redirecting to .io
