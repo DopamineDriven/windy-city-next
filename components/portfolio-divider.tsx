@@ -1,7 +1,21 @@
-const PortfolioDivider = (): JSX.Element => {
+import { FC } from 'react';
+
+interface SiteDividerProps {
+	classNameBorder?: string;
+}
+
+interface SiteDivide extends FC<SiteDividerProps> {}
+
+const SiteDivider: SiteDivide = (props): JSX.Element => {
+	const { classNameBorder = ` ` } = props;
 	return (
-		<hr className='border-primary w-portfolioDividerWidth max-w-portfolioDividerWidth mx-auto mt-portfolioDivider pb-portfolioDivider' />
+		<hr
+			className={
+				'mx-auto w-portfolioDividerWidth max-w-portfolioDividerWidth mt-portfolioDivider pb-portfolioDivider border-primary' +
+				classNameBorder
+			}
+		/>
 	);
 };
 
-export default PortfolioDivider;
+export default SiteDivider;
