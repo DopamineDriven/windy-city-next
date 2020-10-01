@@ -4,7 +4,7 @@ interface CardExcerptProps {
 	excerpt: string;
 }
 
-const CardExcerpt = ({ excerpt }: CardExcerptProps) => {
+const CardExcerpt = ({ excerpt }: CardExcerptProps): JSX.Element => {
 	return (
 		<div className='w-full text-left transition-transform duration-500 transform px-portfolio sm:px-portfolioDivider mb-portfolio sm:mb-portfolioDivider sm:pb-portfolio h-paddingAboutTitleRight overflow-y translate-y-portfolio font-somaRoman'>
 			<ReactMarkdown
