@@ -413,9 +413,9 @@ export const WindyCityDevsIcon: SvgIcon = (props): JSX.Element => {
 					width='879'
 					height='1030'
 					filterUnits='userSpaceOnUse'
-					color-interpolation-filters='sRGB'
+					colorInterpolationFilters='sRGB'
 				>
-					<feFlood flood-opacity='0' result='BackgroundImageFix' />
+					<feFlood floodOpacity='0' result='BackgroundImageFix' />
 					<feColorMatrix
 						in='SourceAlpha'
 						type='matrix'
