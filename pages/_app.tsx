@@ -4,19 +4,13 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { AppProps, NextWebVitalsMetric } from 'next/app';
 import { ReactElement, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import * as gtag from 'lib/google-analytics';
-import ReactGA from 'react-ga';
-
-export const gaInit = () => {
-	ReactGA.initialize(`UA-${process.env.GA_TRACKING_ID}`);
-};
+import { NextRouter, useRouter } from 'next/router';
+import { gaInit, logPageView } from 'lib/google-analytics';
 
 config.autoAddCss = false;
 
 function App({ Component, pageProps }: AppProps): ReactElement {
-	const router = useRouter();
-	const { logPageView, gaInit } = gtag;
+	const router: NextRouter = useRouter();
 	useEffect(() => {
 		gaInit();
 		const handleRouteChange = () => {
