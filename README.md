@@ -1,5 +1,117 @@
 # windy-city-next
 
+### Generate a random secret
+
+- open the terminal, type "node", hit enter
+- next, input the following:
+
+```git
+require('crypto').randomBytes(64).toString('hex')
+```
+
+- this returns a 122-character hexadecimal string
+
+## Generating a public/private keypair for WP Engine SFTP access
+
+- enter the following into a bash terminal
+
+```git
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/wpengine_rsa
+```
+
+- then, to connect with WP Engine site of interest
+
+```git
+ssh -i ~/.ssh/wpengine_rsa -o IdentitiesOnly=yes nextjsheadless@nextjsheadless.ssh.wpengine.net
+```
+
+- this connects you with WP Engine and a figlet-mediated animation appears
+- cd into the correct directory and execute ls to ensure wp-config.php is located here
+
+```git
+cd sites/nextjsheadless && ls
+```
+
+- then enter the following to insert a new key value pair under the WP Engine Settings # tag of the wp-config file
+
+```git
+wp config set GRAPHQL_JWT_AUTH_SECRET_KEY <secret generated using node terminal> --placement=after --anchor=Settings
+```
+
+- double check the placement of the insertion by running
+
+```git
+wp config edit vim
+```
+
+- if changes need to be made, enter
+
+```git
+:vim wp config edit
+```
+
+- then enter
+
+```git
+i
+```
+
+- this enables --&nbsp;INSERT&nbsp;-- mode in Vim
+- proceed with editing; once finished, save your changes with
+
+```git
+:x
+```
+
+- this successfully saves and exits the Vim editor
+- if no changes are required after opening the Vim editor, then
+
+```git
+:qa!
+```
+
+- this exits the vim editor without saving any changes
+- whew, lad
+- https://www.vim.org/
+- https://developer.wordpress.org/cli/commands/
+
+## Enable WPGraphQL JWT Authentication Plugin via WP Engine GraphiQL plugin
+
+- after enabling, open GraphiQL interface
+
+```gql
+mutation Login {
+	login(
+		input: {
+			clientMutationId: "uniqueId"
+			password: "insert password"
+			username: "nextjsheadless"
+		}
+	) {
+		refreshToken
+	}
+}
+```
+
+- this returns a refresh token value for the WORDPRESS_AUTH_REFRESH_TOKEN key in .env.local
+- set the value of the WORDPRESS_PREVIEW_SECRET key to any url-friendly string
+
+```ts
+href={`localhost:3000/api/preview?secret=${process.env.WORDPRESS_PREVIEW_SECRET}&id=${draft.id}`}
+```
+
+## View drafts locally or on the deployed site
+
+- append the following relative path on the landing page url
+- /api/preview?secret=secret-path&id=target-id
+- where - secret-path = /preview-mode - target-id = id of the unpublished post (determined via phpmyadmin)
+- this will load the corresponding post
+- for example, try
+
+```url
+https://headless-wp-next-directory.vercel.app/api/preview?secret=/preview-mode&id=22
+```
+
 ## Yosef
 
 - you can start adding md in `yosef.md` in the root for now
