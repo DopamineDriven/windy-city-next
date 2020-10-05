@@ -1,5 +1,55 @@
 # windy-city-next
 
+## HTTPS connections to Amazon LightSail HWP Server
+
+- Connect to Linux instance using SSH
+- Bitnami terminal opens
+- Enter the following to access wp-config.php
+
+```git
+sudo vi /opt/bitnami/apps/wordpress/htdocs/wp-config.php
+```
+
+- this opens VIM
+- enable -- INSERT -- mode
+
+```vim
+I
+```
+
+- Delete the following two lines of code
+
+```vim
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+```
+
+- Add the following in its place
+
+```vim
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
+define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
+&& $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
+$_SERVER['HTTPS'] = 'on';
+}
+```
+
+- Save the file; press escape, then
+
+```
+:wq!
+```
+
+- restart the apache server
+
+```git
+sudo /opt/bitnami/ctlscript.sh restart Apache
+```
+
+## Useful supps
+
+- https://github.com/arunoda/bulletproof-next-app/tree/using-dynamic-imports-final
+
 ### Generate a random secret
 
 - open the terminal, type "node", hit enter
