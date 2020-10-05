@@ -11,56 +11,42 @@ require('crypto').randomBytes(64).toString('hex')
 
 - this returns a 122-character hexadecimal string
 
-## Generating a public/private keypair for WP Engine SFTP access
+## Accessing wp-config.php through bitnami in Amazon LightSail
 
-- enter the following into a bash terminal
+- open bitnami and enter
 
 ```git
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/wpengine_rsa
+sudo vim /opt/bitnami/apps/wordpress/htdocs/wp-config.php
 ```
 
-- then, to connect with WP Engine site of interest
+- this opens VIM
+- Next, press `I`
 
-```git
-ssh -i ~/.ssh/wpengine_rsa -o IdentitiesOnly=yes nextjsheadless@nextjsheadless.ssh.wpengine.net
-```
-
-- this connects you with WP Engine and a figlet-mediated animation appears
-- cd into the correct directory and execute ls to ensure wp-config.php is located here
-
-```git
-cd sites/nextjsheadless && ls
-```
-
-- then enter the following to insert a new key value pair under the WP Engine Settings # tag of the wp-config file
-
-```git
-wp config set GRAPHQL_JWT_AUTH_SECRET_KEY <secret generated using node terminal> --placement=after --anchor=Settings
-```
-
-- double check the placement of the insertion by running
-
-```git
-wp config edit vim
-```
-
-- if changes need to be made, enter
-
-```git
-:vim wp config edit
-```
-
-- then enter
-
-```git
-i
+```vim
+I
 ```
 
 - this enables --&nbsp;INSERT&nbsp;-- mode in Vim
-- proceed with editing; once finished, save your changes with
+- proceed with editing, define `GRAPHQL_JWT_AUTH_SECRET_KEY` towards the bottom of the file
 
-```git
-:x
+```php
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
+
+define('WP_TEMP_DIR', '/opt/bitnami/apps/wordpress/tmp');
+define('GRAPHQL_JWT_AUTH_SECRET_KEY', '122-digit-hex-value generated using node terminal');
+```
+
+- to save changes, enter
+
+```vim
+:wq!
+```
+
+- to exit without saving, enter
+
+```vim
+:qa!
 ```
 
 - this successfully saves and exits the Vim editor
