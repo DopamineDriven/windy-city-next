@@ -1,5 +1,5 @@
 diff --git a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
-index b70b000..99f02b4 100644
+index d234f1a..978783c 100644
 --- a/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
 +++ b/node_modules/@fortawesome/fontawesome-common-types/index.d.ts
 @@ -1,4 +1,4 @@
