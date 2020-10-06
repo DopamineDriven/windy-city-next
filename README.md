@@ -1,5 +1,9 @@
 # windy-city-next
 
+## @apollo/client v3: migrate from apollo-client et al. v2
+
+- https://www.apollographql.com/docs/react/migrating/apollo-client-3-migration/
+
 ## HTTPS connections to Amazon LightSail HWP Server
 
 - Connect to Linux instance using SSH
