@@ -1,16 +1,15 @@
 import cn from 'classnames';
 import Link from 'next/link';
 
-export interface CoverImageProps {
+export type CoverImageProps = {
 	title: string;
-	src: string;
-	slug?: string;
-}
-
-const CoverImageCard = ({ title, src, slug }: CoverImageProps) => {
+	coverImage: { sourceUrl: string } | any;
+	slug: string | number;
+};
+const CoverImageCard = ({ title, coverImage, slug }: CoverImageProps) => {
 	const image = (
 		<img
-			src={src}
+			src={coverImage}
 			alt={title}
 			className={cn(
 				'w-imagePortfolioMobile max-w-imagePortfolioMobile md:w-imagePortfolio md:max-w-imagePortfolio h-auto max-h-full md:h-auto md:max-h-full',
