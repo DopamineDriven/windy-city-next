@@ -1,15 +1,23 @@
 import 'styles/index.css';
-import '@tailwindcss/typography';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { AppProps, NextWebVitalsMetric } from 'next/app';
 import { ReactElement, useEffect } from 'react';
-import { NextRouter, useRouter } from 'next/router';
+import { useRouter, NextRouter } from 'next/router';
 import { gaInit, logPageView } from 'lib/google-analytics';
+import {
+	ApolloProvider,
+	NormalizedCacheObject,
+	ApolloClient
+} from '@apollo/client';
+import { useApollo } from 'lib/apollo';
 
 config.autoAddCss = false;
 
 function App({ Component, pageProps }: AppProps): ReactElement {
+	const apolloClient: ApolloClient<NormalizedCacheObject> = useApollo(
+		pageProps.initializeApollo
+	);
 	const router: NextRouter = useRouter();
 	useEffect(() => {
 		gaInit();
@@ -21,8 +29,11 @@ function App({ Component, pageProps }: AppProps): ReactElement {
 			router.events.off('routeChangeComplete', handleRouteChange);
 		};
 	}, [router.events]);
-
-	return <Component {...pageProps} />;
+	return (
+		<ApolloProvider client={apolloClient}>
+			<Component {...pageProps} />
+		</ApolloProvider>
+	);
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
@@ -31,22 +42,4 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
 
 export default App;
 
-// Configuring Fortawesome with nextjs v9+
-// https://github.com/UnlyEd/next-right-now/blob/master/src/pages/_app.tsx
-// https://stackoverflow.com/questions/44752189/how-to-add-font-awesome-to-next-js-project
-
-/*
-	const router = useRouter();
-	const { pageview } = gtag;
-	useEffect(() => {
-		const handleRouteChange = (url: string) => {
-			pageview(url);
-		};
-		router.events.on('routeChangeComplete', handleRouteChange);
-		return () => {
-			router.events.off('routeChangeComplete', handleRouteChange);
-		};
-	}, []);
-	return <Component {...pageProps} />;
-}
-*/
+// https://github.com/vercel/next.js/blob/canary/examples/with-apollo/pages/_app.js
