@@ -1,26 +1,30 @@
-import Date from 'components/date';
+import Modified from 'components/date-modified';
+import { authorProps } from 'types/posts';
 import { Fragment } from 'react';
 
 interface AvatarProps {
-	name: string;
-	date: string;
-	avatar: string;
+	author: authorProps;
+	modified: string;
 }
 
-const Avatar = ({ name, date, avatar }: AvatarProps): JSX.Element => {
+const Avatar = ({ author, modified }: AvatarProps): JSX.Element => {
+	const nombre: string =
+		author.firstName && author.lastName
+			? `${author.firstName} ${author.lastName}`
+			: author.name;
 	const ImageJsx = (): JSX.Element => (
 		<div className='block float-right col-span-1 text-right align-middle transition-all duration-500 transform pl-portfolio'>
 			<img
-				src={avatar}
+				src={author.avatar.url}
 				className='block mx-auto rounded-full sm:w-paddingPostTitleTop sm:h-paddingPostTitleTop w-aboutHackingFontAwesomePT h-aboutHackingFontAwesomePT'
-				alt={`avatar for ${name}`}
+				alt={`avatar for ${nombre}`}
 			/>
 		</div>
 	);
 
 	const NombreJsx = (): JSX.Element => (
 		<div className='block col-span-3 align-top text-customAboutSubMobile sm:text-customS'>
-			<a className='block w-full'>{name}</a>
+			<a className='block w-full'>{nombre}</a>
 		</div>
 	);
 
@@ -29,7 +33,7 @@ const Avatar = ({ name, date, avatar }: AvatarProps): JSX.Element => {
 	const ModifiedJsx = (): JSX.Element => (
 		<div className='block float-left col-span-3 text-left align-top text-tertiary'>
 			<a className='block w-full transition-all transform -translate-y-portfolioLS text-customCardDateMobile sm:text-customCardAuthorDate'>
-				<Date modifiedString={date} />
+				<Modified modifiedString={modified} />
 			</a>
 		</div>
 	);
