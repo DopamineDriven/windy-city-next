@@ -1,5 +1,9 @@
 # windy-city-next
 
+## Sitemap
+
+- https://github.com/vercel/next.js/issues/9051
+
 ## @apollo/client v3: migrate from apollo-client et al. v2
 
 - https://www.apollographql.com/docs/react/migrating/apollo-client-3-migration/
