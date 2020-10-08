@@ -4,7 +4,7 @@ import Link from 'next/link';
 export type CoverImageProps = {
 	title: string;
 	coverImage: { sourceUrl: string } | any;
-	slug: string | number;
+	slug?: string | number;
 };
 const CoverImageCard = ({ title, coverImage, slug }: CoverImageProps) => {
 	const image = (

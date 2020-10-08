@@ -11,7 +11,7 @@ import SiteDivider from 'components/site-divider';
 interface CardProps {
 	coverImage: CoverImageProps;
 	title: string;
-	slug: string | number;
+	slug?: string | number;
 	modified: string;
 	author: authorType;
 	excerpt?: string;
