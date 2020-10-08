@@ -114,7 +114,7 @@ const Index = ({
 					</title>
 				</Head>
 
-				<SearchBox
+				{/* <SearchBox
 					selectSearch={filterQuery}
 					selectChange={(evt: SyntheticEvent): void => {
 						const element = evt.currentTarget as HTMLSelectElement;
@@ -130,7 +130,7 @@ const Index = ({
 					allPosts={morePosts}
 					dropdownOptions={['title', 'description']}
 					categories={categories}
-				/>
+				/> */}
 				<div className='items-center content-center justify-center block max-w-full mx-auto my-portfolioH2F'>
 					{morePosts.length > 0 && <Cards posts={filteredCompanies} />}
 				</div>
