@@ -5,11 +5,14 @@ export const gaInit = () => {
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages#top_of_page
+// andrew playing with himself
 export const pageview = (url: string) => {
 	ReactGA.ga('config', process.env.GA_TRACKING_ID, {
 		page_path: url
 	});
 };
+
+// end playing with himself
 
 export const logPageView = () => {
 	ReactGA.set({ page: window.location.pathname });
