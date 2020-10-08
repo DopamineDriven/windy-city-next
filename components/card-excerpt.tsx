@@ -17,3 +17,4 @@ const CardExcerpt = ({ excerpt }: CardExcerptProps): JSX.Element => {
 };
 
 export default CardExcerpt;
+// push
