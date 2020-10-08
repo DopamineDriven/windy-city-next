@@ -12,7 +12,7 @@
 // DocumentNode from graphql
 // Category from wp-graphql
 
-export default function Categories({ categories }: any) {
+export default function Categories({ categories }: any): JSX.Element {
 	return (
 		<div className='max-w-2xl mx-auto text-center flex flex-row justify-center mt-2'>
 			<span className='text-xs text-center'>
