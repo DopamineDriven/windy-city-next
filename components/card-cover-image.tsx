@@ -1,32 +1,39 @@
 import cn from 'classnames';
 import Link from 'next/link';
 
-export type CoverImageProps = {
+export interface CoverImageProps {
 	title: string;
 	coverImage: { sourceUrl: string } | any;
-	slug?: string | number;
-};
-const CoverImageCard = ({ title, coverImage, slug }: CoverImageProps) => {
-	const image = (
+	slug: string | number;
+}
+
+const CoverImageCard = ({
+	title,
+	coverImage,
+	slug
+}: CoverImageProps): JSX.Element => {
+	const Image = (): JSX.Element => (
 		<img
-			src={coverImage}
+			src={coverImage ? coverImage.sourceUrl : coverImage}
 			alt={title}
 			className={cn(
-				'w-imagePortfolioMobile max-w-imagePortfolioMobile md:w-imagePortfolio md:max-w-imagePortfolio h-auto max-h-full md:h-auto md:max-h-full',
+				'w-xsCardGridCima max-w-xsCardGridCima sm:w-aboutImage600 sm:max-w-aboutImage600 h-aboutOffsetPRMobile sm:h-portfolioS sm:max-h-full rounded-t-custom overflow-x-hidden lg:w-aboutImage400 lg:max-w-aboutImage400',
 				{
-					'hover:shadow-lg transition-shadow duration-400': slug
+					'transition-shadow duration-400': slug
 				}
 			)}
 		/>
 	);
 	return (
-		<div className='-mx-5 sm:mx-0'>
+		<div className=''>
 			{slug ? (
-				<Link as={`/posts/${slug}`} href='/posts/[slug]' passHref scroll={true}>
-					<a aria-label={title}>{image}</a>
+				<Link as={`/posts/${slug}`} href='/posts/[slug]'>
+					<a aria-label={title}>
+						<Image />
+					</a>
 				</Link>
 			) : (
-				image
+				<Image />
 			)}
 		</div>
 	);
