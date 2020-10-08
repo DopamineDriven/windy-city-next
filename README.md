@@ -1,5 +1,161 @@
 # windy-city-next
 
+## Sitemap
+
+- https://github.com/vercel/next.js/issues/9051
+
+## @apollo/client v3: migrate from apollo-client et al. v2
+
+- https://www.apollographql.com/docs/react/migrating/apollo-client-3-migration/
+
+## HTTPS connections to Amazon LightSail HWP Server
+
+- Connect to Linux instance using SSH
+- Bitnami terminal opens
+- Enter the following to access wp-config.php
+
+```git
+sudo vi /opt/bitnami/apps/wordpress/htdocs/wp-config.php
+```
+
+- this opens VIM
+- enable -- INSERT -- mode
+
+```vim
+I
+```
+
+- Delete the following two lines of code
+
+```vim
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+```
+
+- Add the following in its place
+
+```vim
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
+define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
+&& $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
+$_SERVER['HTTPS'] = 'on';
+}
+```
+
+- Save the file; press escape, then
+
+```
+:wq!
+```
+
+- restart the apache server
+
+```git
+sudo /opt/bitnami/ctlscript.sh restart Apache
+```
+
+## Useful supps
+
+- https://github.com/arunoda/bulletproof-next-app/tree/using-dynamic-imports-final
+
+### Generate a random secret
+
+- open the terminal, type "node", hit enter
+- next, input the following:
+
+```git
+require('crypto').randomBytes(64).toString('hex')
+```
+
+- this returns a 122-character hexadecimal string
+
+## Accessing wp-config.php through bitnami in Amazon LightSail
+
+- open bitnami and enter
+
+```git
+sudo vim /opt/bitnami/apps/wordpress/htdocs/wp-config.php
+```
+
+- this opens VIM
+- Next, press `I`
+
+```vim
+I
+```
+
+- this enables --&nbsp;INSERT&nbsp;-- mode in Vim
+- proceed with editing, define `GRAPHQL_JWT_AUTH_SECRET_KEY` towards the bottom of the file
+
+```php
+/** Sets up WordPress vars and included files. */
+require_once ABSPATH . 'wp-settings.php';
+
+define('WP_TEMP_DIR', '/opt/bitnami/apps/wordpress/tmp');
+define('GRAPHQL_JWT_AUTH_SECRET_KEY', '122-digit-hex-value generated using node terminal');
+```
+
+- to save changes, enter
+
+```vim
+:wq!
+```
+
+- to exit without saving, enter
+
+```vim
+:qa!
+```
+
+- this successfully saves and exits the Vim editor
+- if no changes are required after opening the Vim editor, then
+
+```git
+:qa!
+```
+
+- this exits the vim editor without saving any changes
+- whew, lad
+- https://www.vim.org/
+- https://developer.wordpress.org/cli/commands/
+
+## Enable WPGraphQL JWT Authentication Plugin via WP Engine GraphiQL plugin
+
+- after enabling, open GraphiQL interface
+
+```gql
+mutation Login {
+	login(
+		input: {
+			clientMutationId: "uniqueId"
+			password: "insert password"
+			username: "nextjsheadless"
+		}
+	) {
+		refreshToken
+	}
+}
+```
+
+- this returns a refresh token value for the WORDPRESS_AUTH_REFRESH_TOKEN key in .env.local
+- set the value of the WORDPRESS_PREVIEW_SECRET key to any url-friendly string
+
+```ts
+href={`localhost:3000/api/preview?secret=${process.env.WORDPRESS_PREVIEW_SECRET}&id=${draft.id}`}
+```
+
+## View drafts locally or on the deployed site
+
+- append the following relative path on the landing page url
+- /api/preview?secret=secret-path&id=target-id
+- where - secret-path = /preview-mode - target-id = id of the unpublished post (determined via phpmyadmin)
+- this will load the corresponding post
+- for example, try
+
+```url
+https://headless-wp-next-directory.vercel.app/api/preview?secret=/preview-mode&id=22
+```
+
 ## Yosef
 
 - you can start adding md in `yosef.md` in the root for now

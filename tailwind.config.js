@@ -78,7 +78,7 @@ module.exports = {
 				wiggle: 'wiggle 10s ease-in-out infinite',
 				hero: 'hero 1s ease-in-out infinite',
 				slowPing: 'pulse 10s cubic-bezier(0, 0, 0.2, 1) infinite',
-				spinSlow: 'spin 5s linear infinite'
+				spinSlow: 'spin 3s linear infinite'
 			},
 			fontFamily: {
 				head: ['goudy-bookletter-1911', 'serif'],

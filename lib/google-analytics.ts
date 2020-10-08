@@ -1,6 +1,6 @@
 import ReactGA, { EventArgs } from 'react-ga';
 
-export const gaInit = () => {
+export const gaInit = (): void => {
 	ReactGA.initialize(`UA-${process.env.GA_TRACKING_ID}`);
 };
 
@@ -12,14 +12,12 @@ export const pageview = (url: string) => {
 	});
 };
 
-// end playing with himself
-
-export const logPageView = () => {
+export const logPageView = (): void => {
 	ReactGA.set({ page: window.location.pathname });
 	ReactGA.pageview(window.location.pathname + window.location.search);
 };
 
-export const event = ({ action, category, label, value }: EventArgs) => {
+export const event = ({ action, category, label, value }: EventArgs): void => {
 	ReactGA.event({
 		action,
 		category,

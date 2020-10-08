@@ -1,19 +1,30 @@
 {
 	"compilerOptions": {
 		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
+		"lib": ["dom", "dom.iterable", "ESNext", "ES2016"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
 		"esModuleInterop": true,
+		"sourceMap": true,
 		"module": "esnext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"baseUrl": "."
+		"baseUrl": ".",
+		"plugins": [
+			{
+				"name": "typescript-eslint-language-service"
+			},
+			{
+				"name": "ts-graphql-plugin",
+				"schema": "./pages/api/get-all-posts-with-slug.ts",
+				"tag": "gql"
+			}
+		]
 	},
 	"exclude": ["node_modules"],
 	"include": [
