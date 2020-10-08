@@ -10,7 +10,7 @@ const CardExcerpt = ({ excerpt }: CardExcerptProps): JSX.Element => {
 			<ReactMarkdown
 				escapeHtml={false}
 				source={excerpt}
-				className=' text-customTitle sm:text-customS lg:text-customExcerpt'
+				className=' text-customTitle sm:text-customS lg:text-customCardTitle'
 			/>
 		</div>
 	);
