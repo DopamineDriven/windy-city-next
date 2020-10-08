@@ -42,7 +42,7 @@ const Card = ({
 					<div className='flex flex-col justify-center flex-grow h-aboutOffsetPRMobile sm:h-auto text-left bg-primary'>
 						<CardTitle slug={slug} title={title} />
 						<CardExcerpt excerpt={excerpt} />
-						<div className='block transition-all duration-500 transform pl-portfolioDivider font-somaRoman'>
+						<div className='block transition-all duration-500 transform pl-portfolioDivider font-somaRoman translate-y-portfolio'>
 							<Avatar author={author.node} modified={modified} />
 						</div>
 						<SiteDivider />
