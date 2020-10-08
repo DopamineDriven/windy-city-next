@@ -1,18 +1,19 @@
 interface Author {
-	name: string;
-	avatar: string;
-	github: string;
-	heroku: string;
-	vercel: string;
-	antdesign: string;
-	apollo: string;
-	auth0: string;
-	graphql: string;
-	next: string;
-	react: string;
-	tailwindcss: string;
-	typescript: string;
-	wordpress: string;
+	node: {
+		avatar: {
+			url: string;
+		};
+		name?: string;
+		firstName?: string;
+		lastName?: string;
+	};
+	// mediaType: string;
+	// avatar: {
+	// 	url: string;
+	// }
+	// facebook: string;
+	// twitter: string;
+	// instagram: string;
 }
 
 export default Author;

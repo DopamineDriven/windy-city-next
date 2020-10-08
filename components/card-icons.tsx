@@ -15,13 +15,13 @@ type CardIconProps = {
 // to edit icon size, target iconClass
 const CardIcons = ({ social }: CardIconProps) => {
 	const anchorClassNull =
-		' items-center justify-center mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitletMobile inline-block leading-relaxed text-center align-middle transition-colors duration-1000  fill-current bg-primary text-quinary focus:outline-none';
+		' items-center justify-center mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitletMobile inline-block leading-relaxed text-center align-middle transition-all duration-1000  fill-current bg-primary text-quinary focus:outline-none transform translate-x-portfolioDivider';
 	const anchorClass =
-		' items-center justify-center inline-block mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitleMobile leading-relaxed text-center align-middle transition-colors duration-500 bg-primary hover:text-primary focus:outline-none';
+		' items-center justify-center inline-block mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitleMobile leading-relaxed text-center align-middle transition-all duration-500 bg-primary hover:text-primary focus:outline-none transform translate-x-portfolioDivider';
 	const iconClassNull =
-		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform sm:text-customExcerptMobile text-customTitleMobile fa-portfolioDivider';
+		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile fa-portfolioDivider';
 	const iconClass =
-		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform sm:text-customExcerptMobile text-customTitleMobile hover:text-tertiary fa-portfolioDivider';
+		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile hover:text-tertiary fa-portfolioDivider';
 	return (
 		<div className='block text-right align-middle'>
 			<ul className='block align-middle'>

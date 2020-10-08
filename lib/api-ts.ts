@@ -106,8 +106,8 @@ export async function getAllPostsForHomeAlphabetical({
             date
             modified
             social {
-              facebook
-              instagram
+              github
+              linkedin
               twitter
               website
             }
@@ -178,8 +178,8 @@ export async function getPostAndMorePosts({
       date
       modified
       social {
-        facebook
-        instagram
+        github
+        linkedin
         twitter
         website
       }
@@ -341,8 +341,8 @@ export async function getAllPostsForCategory({
                 slug
                 modified
                 social {
-                  facebook
-                  instagram
+                  github
+                  linkedin
                   twitter
                   website
                   }
@@ -439,8 +439,8 @@ export async function getAllPostsForAbout({
             date
             modified
             social {
-              facebook
-              instagram
+              github
+              linkedin
               twitter
               website
             }

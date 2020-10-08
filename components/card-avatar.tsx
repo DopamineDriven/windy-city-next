@@ -16,14 +16,14 @@ const Avatar = ({ author, modified }: AvatarProps): JSX.Element => {
 		<div className='block float-right col-span-1 text-right align-middle transition-all duration-500 transform pl-portfolio'>
 			<img
 				src={author.avatar.url}
-				className='block mx-auto rounded-full sm:w-paddingPostTitleTop sm:h-paddingPostTitleTop w-aboutHackingFontAwesomePT h-aboutHackingFontAwesomePT'
+				className='block mx-auto rounded-full lg:w-portfolioLSMobile lg:h-portfolioLSMobile sm:w-paddingPostTitleTop sm:h-paddingPostTitleTop w-aboutHackingFontAwesomePT h-aboutHackingFontAwesomePT'
 				alt={`avatar for ${nombre}`}
 			/>
 		</div>
 	);
 
 	const NombreJsx = (): JSX.Element => (
-		<div className='block col-span-3 align-top text-customAboutSubMobile sm:text-customS'>
+		<div className='block col-span-3 align-top text-customAboutSubMobile sm:text-customS lg:text-customExcerpt'>
 			<a className='block w-full'>{nombre}</a>
 		</div>
 	);
@@ -32,7 +32,7 @@ const Avatar = ({ author, modified }: AvatarProps): JSX.Element => {
 
 	const ModifiedJsx = (): JSX.Element => (
 		<div className='block float-left col-span-3 text-left align-top text-tertiary'>
-			<a className='block w-full transition-all transform -translate-y-portfolioLS text-customCardDateMobile sm:text-customCardAuthorDate'>
+			<a className='block w-full transition-all transform -translate-y-portfolioLS lg:-translate-y-portfolio text-customCardDateMobile sm:text-customCardAuthorDate lg:text-customExcerpt'>
 				<Modified modifiedString={modified} />
 			</a>
 		</div>
