@@ -1,30 +1,24 @@
-import Author from 'types/author';
-import Social from 'types/social/posts-social';
+import Author from './author';
+import Tag from './tag';
+import Category from './category';
 
-interface PostType extends Social {
-	slug: string;
+interface PostType {
+	slug: string | number;
 	title: string;
-	postTitle: string;
 	date: string;
-	coverImage: string;
-	articleImage: string;
+	featuredImage: {
+		node: {
+			sourceUrl: string;
+		};
+	};
 	author: Author;
 	excerpt: string;
-	articleExcerpt: string;
-	ogImage: {
+	ogImage?: {
 		url: string;
 	};
 	content: string;
+	categories?: Category[];
+	tags: { edges: any[] };
 }
 
 export default PostType;
-
-export enum StaticPropsPosts {
-	title = 'title',
-	date = 'date',
-	slug = 'slug',
-	coverImage = 'coverImage',
-	excerpt = 'excerpt',
-	postTitle = 'postTitle',
-	articleImage = 'articleImage'
-}
