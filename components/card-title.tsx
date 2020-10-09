@@ -19,7 +19,7 @@ const CardTitle = ({ title, slug }: CardTitleProps): JSX.Element => {
 					<ReactMarkdown
 						escapeHtml={false}
 						source={title}
-						className='text-center transition-all duration-1000 transform sm:text-left hover:text-tertiary text-customTitleMobile sm:text-customTitle animate-hero '
+						className='text-center transition-all duration-1000 transform sm:text-left hover:text-tertiary text-customTitleMobile sm:text-customTitle lg:text-customExcerptMobile animate-hero '
 					/>
 				</a>
 			</Link>
