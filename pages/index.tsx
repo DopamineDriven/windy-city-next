@@ -190,7 +190,7 @@ IMPORTANT
 export const getStaticProps = async ({
 	preview = false,
 	// context,
-	field = MODIFIED || TITLE || DATE,
+	field = TITLE || MODIFIED || DATE,
 	order = ASC || DESC,
 	desiredCategory
 }: StaticProps) => {
