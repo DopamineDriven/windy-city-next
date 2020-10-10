@@ -1,5 +1,13 @@
 # windy-city-next
 
+## Use .env.local variables in package.json scripts!
+
+- https://medium.com/@arrayknight/how-to-use-env-variables-in-package-json-509b9b663867
+
+## genql
+
+- https://github.com/remorses/genql
+
 ## Configuring lightsail SSL/TSL
 
 ## Sitemap

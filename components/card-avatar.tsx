@@ -13,7 +13,7 @@ const Avatar = ({ author, modified }: AvatarProps): JSX.Element => {
 			? `${author.firstName} ${author.lastName}`
 			: author.name;
 	const ImageJsx = (): JSX.Element => (
-		<div className='block float-right col-span-1 text-right align-middle transition-all duration-500 transform pl-portfolio lg:pl-portfolioDivider'>
+		<div className='block float-right col-span-1 text-right align-middle transition-all duration-1000 transform pl-portfolio lg:pl-portfolioDivider'>
 			<img
 				src={author.avatar.url}
 				className='block mx-auto rounded-full lg:w-portfolioLSMobile lg:h-portfolioLSMobile sm:w-paddingPostTitleTop sm:h-paddingPostTitleTop w-aboutHackingFontAwesomePT h-aboutHackingFontAwesomePT'

@@ -111,6 +111,7 @@ export const INTROSPECTION_QUERY = async (): Promise<void> => {
 			}
 		`
 	);
+	return data;
 };
 
 // export const allPostsQueryVars = {
