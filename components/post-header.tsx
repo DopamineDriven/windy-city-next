@@ -5,6 +5,7 @@ import CoverImage, { CoverImageProps } from './post-cover-image';
 import PostTitle from './post-title';
 import Categories from './categories';
 import CardIcons from './card-icons';
+import SiteDivider from './site-divider';
 
 type PostHeaderProps = {
 	title: string;
@@ -61,7 +62,7 @@ export default function PostHeader({
 					<CardIcons social={social} />
 				</div>
 
-				<hr className='border-customGray w-4xl' />
+				<SiteDivider />
 			</div>
 		</>
 	);

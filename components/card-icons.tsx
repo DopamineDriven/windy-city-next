@@ -7,21 +7,56 @@ import {
 	faLinkedin,
 	faGithub
 } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+// interface CardIconProps {
+// 	social: {
+// 		facebook: string;
+// 		instagram: string;
+// 		twitter: string;
+// 		linkedin: string;
+// 		website: string;
+// 		github: string;
+// 	};
+// }
 
-type CardIconProps = {
+// interface Social {
+// 	social: string[];
+// }
+
+// interface CardIconProps {
+// 	facebook: string;
+// 	instagram: string;
+// 	twitter: string;
+// 	linkedin: string;
+// 	github: string;
+// 	website: string;
+// }
+
+// interface faProps {
+// 	faFacebook: IconProp;
+// 	faInstagram: IconProp;
+// 	faTwitter: IconProp;
+// 	faCustomWebsite: IconProp;
+// }
+
+// const faPropsMapped: faProps[] = [{
+// 	faFacebook: faFacebook
+// }]
+
+interface Social {
 	social: any;
-};
+}
 
 // to edit icon size, target iconClass
-const CardIcons = ({ social }: CardIconProps) => {
+const CardIcons = ({ social }: Social) => {
 	const anchorClassNull =
 		' items-center justify-center mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitletMobile inline-block leading-relaxed text-center align-middle transition-all duration-1000  fill-current bg-primary text-quinary focus:outline-none transform translate-x-portfolioDivider';
 	const anchorClass =
 		' items-center justify-center inline-block mx-portfolioDivider sm:mx-portfolioDivider mb-portfolioDivider text-customExcerpt sm:text-customTitleMobile leading-relaxed text-center align-middle transition-all duration-500 bg-primary hover:text-primary focus:outline-none transform translate-x-portfolioDivider';
 	const iconClassNull =
-		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile fa-portfolioDivider';
+		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out  transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile fa-portfolioDivider';
 	const iconClass =
-		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out delay-300 transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile hover:text-tertiary fa-portfolioDivider';
+		' flex font-extrabold text-center align-middle transition-all duration-1000 ease-in-out  transform lg:text-customTitle sm:text-customExcerptMobile text-customTitleMobile hover:text-tertiary fa-portfolioDivider';
 	return (
 		<div className='block text-right align-middle'>
 			<ul className='block align-middle'>
