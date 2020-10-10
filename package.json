@@ -13,7 +13,9 @@
 		"analyze": "ANALYZE=true yarn build",
 		"postinstall": "npx patch-package",
 		"prettier-check": "prettier --config .prettierrc --check .",
-		"prettier-write": "prettier --config .prettierrc --write ."
+		"prettier-write": "prettier --config .prettierrc --write .",
+		"client:download": "yarn apollo client:download-schema ./schema.json --endpoint=https://nextjsheadless.wpengine.com/graphhql",
+		"client:generate": "yarn apollo codegen:generate --endpoint=https://nextjsheadless.wpengine.com/graphql --target=typescript --includes=lib/api-post-slugs.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts types"
 	},
 	"husky": {
 		"hooks": {
@@ -31,6 +33,7 @@
 		"@next/bundle-analyzer": "^9.5.3",
 		"@tailwindcss/typography": "^0.2.0",
 		"@vercel/node": "^1.8.3",
+		"apollo-codegen": "^0.20.2",
 		"classnames": "^2.2.6",
 		"date-fns": "^2.16.1",
 		"gray-matter": "^4.0.2",
@@ -64,6 +67,7 @@
 		"@types/react-dom": "^16.9.8",
 		"@types/react-syntax-highlighter": "^11.0.5",
 		"@types/wordpress__api-fetch": "^3.2.3",
+		"apollo": "^2.31.0",
 		"autoprefixer": "9.8.6",
 		"file-loader": "^6.1.0",
 		"graphql-schema-typescript": "^1.3.2",
