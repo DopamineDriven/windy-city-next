@@ -15,7 +15,7 @@
 		"prettier-check": "prettier --config .prettierrc --check .",
 		"prettier-write": "prettier --config .prettierrc --write .",
 		"client:download": "yarn apollo client:download-schema ./schema.json --endpoint=https://nextjsheadless.wpengine.com/graphhql",
-		"client:generate": "yarn apollo codegen:generate --endpoint=https://nextjsheadless.wpengine.com/graphql --target=typescript --includes=lib/api-post-slugs.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts types"
+		"client:generate": "yarn apollo codegen:generate --endpoint=https://nextjsheadless.wpengine.com/graphql --target=typescript --includes=graphql/**/*.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts"
 	},
 	"husky": {
 		"hooks": {

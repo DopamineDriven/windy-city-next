@@ -5,9 +5,7 @@
 
 // let fallbackC
 // const gql: WPGraphQL = new WPGraphQL(`${process.env.WORDPRESS_API_URL}`, { });
-import { gql, useQuery, NetworkStatus } from '@apollo/client';
-import { generateTypeScriptTypes } from 'graphql-schema-typescript';
-import { DocumentNode } from 'graphql';
+import { gql } from '@apollo/client';
 import { fetchAPI } from 'lib/api';
 
 export const INTROSPECTION_QUERY = async (): Promise<void> => {
