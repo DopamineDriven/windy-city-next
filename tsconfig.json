@@ -33,6 +33,8 @@
 		"pages/**/*",
 		"components/**/*",
 		"lib/**/*",
-		"types/**/*"
+		"types/**/*",
+		"graphql/api-post-slugs.ts",
+		"graphql/api-introspection.ts"
 	]
 }
