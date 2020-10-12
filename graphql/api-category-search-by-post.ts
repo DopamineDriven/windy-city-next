@@ -11,6 +11,8 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 			edges {
 				node {
 					name
+					count
+					id
 					posts(where: { orderby: { field: $field, order: $order } }) {
 						edges {
 							node {
@@ -44,7 +46,6 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 										}
 									}
 								}
-								count
 								content
 								date
 								modified

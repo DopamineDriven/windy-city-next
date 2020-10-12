@@ -174,6 +174,14 @@ export interface SearchCategoriesReturnPosts_categories_edges_node {
 	 */
 	name: string | null;
 	/**
+	 * The number of objects connected to the object
+	 */
+	count: number | null;
+	/**
+	 * The globally unique ID for the object
+	 */
+	id: string;
+	/**
 	 * Connection between the category type and the post type
 	 */
 	posts: SearchCategoriesReturnPosts_categories_edges_node_posts | null;

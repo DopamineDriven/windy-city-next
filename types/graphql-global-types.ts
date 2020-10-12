@@ -8,6 +8,17 @@
 //==============================================================
 
 /**
+ * The Type of Identifier used to fetch a single resource. Default is ID.
+ */
+export enum CategoryIdType {
+	DATABASE_ID = 'DATABASE_ID',
+	ID = 'ID',
+	NAME = 'NAME',
+	SLUG = 'SLUG',
+	URI = 'URI'
+}
+
+/**
  * The cardinality of the connection order
  */
 export enum OrderEnum {

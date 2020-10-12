@@ -14,6 +14,10 @@ export interface CategoriesByNodes_categories_nodes {
 	 */
 	name: string | null;
 	/**
+	 * The number of objects connected to the object
+	 */
+	count: number | null;
+	/**
 	 * An alphanumeric identifier for the object unique to its type.
 	 */
 	slug: string | null;
