@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown/with-html';
+import { getAllPostsWithSlug_posts_edges_node } from '../graphql/__generated__/getAllPostsWithSlug';
 
 interface CardTitleProps {
 	title: string;
-	slug?: string | number;
+	slug?: getAllPostsWithSlug_posts_edges_node;
 	// postTitle: string;
 }
 
