@@ -1,5 +1,9 @@
 # windy-city-next
 
+## Multilingual Support
+
+- https://www.storyblok.com/tp/next-js-react-guide
+
 ## Use .env.local variables in package.json scripts!
 
 - https://medium.com/@arrayknight/how-to-use-env-variables-in-package-json-509b9b663867
