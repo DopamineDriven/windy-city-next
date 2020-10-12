@@ -14,8 +14,8 @@
 		"postinstall": "npx patch-package",
 		"prettier-check": "prettier --config .prettierrc --check .",
 		"prettier-write": "prettier --config .prettierrc --write .",
-		"client:download": "yarn apollo client:download-schema ./schema.json --endpoint=https://nextjsheadless.wpengine.com/graphql",
-		"client:generate": "yarn apollo codegen:generate --endpoint=https://nextjsheadless.wpengine.com/graphql --target=typescript --includes=graphql/**/*.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts"
+		"client:download": "dotenv cross-var yarn apollo client:download-schema --includes=graphql --endpoint=%WORDPRESS_API_URL%",
+		"client:generate": "yarn apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes=graphql/**/*.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts"
 	},
 	"husky": {
 		"hooks": {
@@ -69,7 +69,10 @@
 		"@types/wordpress__api-fetch": "^3.2.3",
 		"apollo": "^2.31.0",
 		"autoprefixer": "9.8.6",
+		"cross-var": "^1.1.0",
+		"dotenv-cli": "^4.0.0",
 		"file-loader": "^6.1.0",
+		"graphql": "^15.3.0",
 		"graphql-schema-typescript": "^1.3.2",
 		"husky": "^4.3.0",
 		"next-compose-plugins": "^2.2.0",

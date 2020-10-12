@@ -16,7 +16,7 @@ const GET_ALL_POSTS_WITH_SLUG = async () => {
 			}
 		`
 	);
-	return postSlugs?.posts.edges.node?.slug;
+	return postSlugs?.posts;
 };
 
 export default GET_ALL_POSTS_WITH_SLUG;
