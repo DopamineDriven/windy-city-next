@@ -14,6 +14,7 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 					name
 					count
 					id
+					slug
 					posts(where: { orderby: { field: $field, order: $order } }) {
 						edges {
 							node {
