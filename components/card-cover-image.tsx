@@ -1,10 +1,11 @@
 import cn from 'classnames';
 import Link from 'next/link';
+import { getAllPostsWithSlug_posts_edges_node } from '../graphql/__generated__/getAllPostsWithSlug';
 
 export interface CoverImageProps {
 	title: string;
 	coverImage: { sourceUrl: string } | any;
-	slug: string | number;
+	slug: getAllPostsWithSlug_posts_edges_node;
 }
 
 const CoverImageCard = ({

@@ -21,7 +21,7 @@
 			},
 			{
 				"name": "ts-graphql-plugin",
-				"schema": "./pages/api/get-all-posts-with-slug.ts",
+				"schema": "./graphql",
 				"tag": "gql"
 			}
 		]
@@ -31,6 +31,7 @@
 		"global.d.ts",
 		"next-env.d.ts",
 		"pages/**/*",
+		"graphql/**/*",
 		"components/**/*",
 		"lib/**/*",
 		"types/**/*",
