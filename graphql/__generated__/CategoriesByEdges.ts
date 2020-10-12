@@ -53,3 +53,7 @@ export interface CategoriesByEdges {
 	 */
 	categories: CategoriesByEdges_categories | null;
 }
+
+export interface CategoriesByEdgesVariables {
+	hideEmpty: boolean;
+}

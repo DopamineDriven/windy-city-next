@@ -215,4 +215,5 @@ export interface SearchCategoriesReturnPostsVariables {
 	search?: string | null;
 	field: PostObjectsConnectionOrderbyEnum;
 	order: OrderEnum;
+	hideEmpty: boolean;
 }
