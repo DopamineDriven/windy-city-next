@@ -44,6 +44,7 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 										}
 									}
 								}
+								count
 								content
 								date
 								modified

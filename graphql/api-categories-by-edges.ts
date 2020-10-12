@@ -7,6 +7,7 @@ const CATEGORIES_BY_EDGES = gql`
 				node {
 					slug
 					name
+					count
 					id
 				}
 				cursor

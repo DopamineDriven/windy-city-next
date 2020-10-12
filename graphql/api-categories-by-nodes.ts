@@ -5,6 +5,7 @@ const CATEGORIES_BY_NODES = gql`
 		categories {
 			nodes {
 				name
+				count
 				slug
 				id
 			}
