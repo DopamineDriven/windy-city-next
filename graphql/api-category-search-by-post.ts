@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-const SEARCH_CATEGORY_RETURN_POSTS = gql`
-	query MyQuery(
+const SEARCH_CATEGORIES_RETURN_POSTS = gql`
+	query SearchCategoriesReturnPosts(
 		$name: [String!]
 		$search: String
 		$field: PostObjectsConnectionOrderbyEnum!
@@ -57,4 +57,4 @@ const SEARCH_CATEGORY_RETURN_POSTS = gql`
 	}
 `;
 
-export default SEARCH_CATEGORY_RETURN_POSTS;
+export default SEARCH_CATEGORIES_RETURN_POSTS;
