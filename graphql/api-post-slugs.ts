@@ -21,7 +21,7 @@ import { getAllPostsWithSlug } from 'graphql/__generated__/getAllPostsWithSlug';
 
 // export default GET_ALL_POSTS_WITH_SLUG;
 
-const postSlugs = gql`
+const POST_SLUGS = gql`
 	query getAllPostsWithSlug {
 		posts(first: 10000) {
 			edges {
@@ -33,4 +33,4 @@ const postSlugs = gql`
 	}
 `;
 
-export default postSlugs;
+export default POST_SLUGS;
