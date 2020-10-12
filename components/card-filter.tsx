@@ -3,7 +3,7 @@ import {
 	OrderEnum
 } from '../types/graphql-global-types';
 import classNames from 'classnames';
-import { useState, Fragment } from 'react';
+import { useState, Fragment, FC } from 'react';
 
 interface CardFilterProps {
 	filter: PostObjectsConnectionOrderbyEnum;
@@ -20,7 +20,7 @@ const Dropdown = ({ filter, setFilter }: CardFilterProps) => {
 
 	const buttonClasses = `inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-blue-500 active:text-gray-200 transition ease-in-out duration-150`;
 
-	const buttonDrop = (
+	const ButtonDrop = () => (
 		<button
 			onClick={active => setActive(!active)}
 			className={` ${buttonClasses}`}
@@ -31,7 +31,15 @@ const Dropdown = ({ filter, setFilter }: CardFilterProps) => {
 
 	const OptionConfig = () => (
 		<div className='inline-block w-portfolioLS'>
-			<select className='block appearance-none w-full bg-primary text-primary border border-primary px-portfolioRS py-portfolioDivider leading-headerAbout focus:outline-none'></select>
+			<select
+				value={filter}
+				onChange={() => setFilter(filter)}
+				className='block appearance-none w-full bg-primary text-primary border border-primary px-portfolioRS py-portfolioDivider leading-headerAbout focus:outline-none'
+			></select>
+			<option value={AUTHOR}>Author</option>
+			<option value={DATE}>Date</option>
+			<option value={MODIFIED}>Modified</option>
+			<option value={TITLE}>Title</option>
 		</div>
 	);
 
