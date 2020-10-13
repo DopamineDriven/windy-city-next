@@ -5,7 +5,7 @@ import { PostSlugs_posts_edges_node } from '../graphql/__generated__/PostSlugs';
 export interface CoverImageProps {
 	title: string;
 	coverImage: { sourceUrl: string } | any;
-	slug: string | number;
+	slug: PostSlugs_posts_edges_node;
 }
 
 const CoverImageCard = ({

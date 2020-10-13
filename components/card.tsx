@@ -12,7 +12,7 @@ import { PostSlugs_posts_edges_node } from '../graphql/__generated__/PostSlugs';
 interface CardProps {
 	coverImage: CoverImageProps;
 	title: string;
-	slug: string | number;
+	slug: PostSlugs_posts_edges_node;
 	modified: string;
 	author: authorType;
 	excerpt?: string;
