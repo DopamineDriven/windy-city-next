@@ -8,8 +8,8 @@ import { useState, Fragment, FC } from 'react';
 interface CardFilterProps {
 	filter: PostObjectsConnectionOrderbyEnum;
 	setFilter: (filter: PostObjectsConnectionOrderbyEnum) => void;
-	orderSelect: OrderEnum;
-	setOrderSelect: (orderSelect: OrderEnum) => void;
+	// orderSelect: OrderEnum;
+	// setOrderSelect: (orderSelect: OrderEnum) => void;
 }
 
 const { ASC, DESC } = OrderEnum;
@@ -63,6 +63,12 @@ const CardFilter = ({ filter, setFilter }: CardFilterProps) => {
 				}
 			)}
 		></div>
+	);
+
+	return (
+		<Fragment>
+			<OptionConfig />
+		</Fragment>
 	);
 };
 

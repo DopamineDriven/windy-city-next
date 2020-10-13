@@ -5,6 +5,10 @@ import {
 	GraphQLString
 } from 'graphql';
 import CategoryProps from 'types/category';
+import {
+	OrderEnum,
+	PostObjectsConnectionOrderbyEnum
+} from 'types/graphql-global-types';
 import { AllPostsProps, PostsProps } from 'types/posts';
 import TagProps from 'types/tag';
 // import { APIFetchOptions } from "@types/wordpress__api-fetch"
