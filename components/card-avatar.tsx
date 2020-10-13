@@ -10,7 +10,7 @@ interface AvatarProps {
 }
 
 const Avatar = ({ author, modified }: AvatarProps): JSX.Element => {
-	const nombre: string | undefined =
+	const nombre: string =
 		author.firstName && author.lastName
 			? `${author.firstName} ${author.lastName}`
 			: author.name;
