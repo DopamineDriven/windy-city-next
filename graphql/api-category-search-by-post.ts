@@ -6,13 +6,15 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 		$search: String
 		$field: PostObjectsConnectionOrderbyEnum!
 		$order: OrderEnum!
+		$hideEmpty: Boolean!
 	) {
-		categories(where: { name: $name, search: $search }) {
+		categories(where: { name: $name, search: $search, hideEmpty: $hideEmpty }) {
 			edges {
 				node {
 					name
 					count
 					id
+					slug
 					posts(where: { orderby: { field: $field, order: $order } }) {
 						edges {
 							node {

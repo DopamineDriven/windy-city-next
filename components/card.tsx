@@ -7,12 +7,12 @@ import CardTitle from 'components/card-title';
 import CardExcerpt from 'components/card-excerpt';
 import { Fragment } from 'react';
 import SiteDivider from 'components/site-divider';
-import { getAllPostsWithSlug_posts_edges_node } from '../graphql/__generated__/getAllPostsWithSlug';
+import { PostSlugs_posts_edges_node } from '../graphql/__generated__/PostSlugs';
 
 interface CardProps {
 	coverImage: CoverImageProps;
 	title: string;
-	slug: getAllPostsWithSlug_posts_edges_node;
+	slug: PostSlugs_posts_edges_node;
 	modified: string;
 	author: authorType;
 	excerpt?: string;

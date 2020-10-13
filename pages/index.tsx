@@ -36,24 +36,45 @@ import Footer from 'components/footer';
 // 	allPostsQueryVars,
 // 	ALL_POSTS_QUERY
 // } from 'components/cards-coalesced-hook';
-// import { initializeApollo } from 'lib/apollo';
-// import { ApolloClient, NormalizedCacheObject } from '@apollo/client';
+import { initializeApollo } from 'lib/apollo';
+import {
+	ApolloClient,
+	NormalizedCacheObject,
+	ApolloConsumer
+} from '@apollo/client';
+import CardFilter from 'components/card-filter';
+import {
+	PostObjectsConnectionOrderbyEnum,
+	OrderEnum
+} from 'types/graphql-global-types';
+import {
+	AllPosts as AllPostsData,
+	AllPostsVariables
+} from 'graphql/__generated__/AllPosts';
+import ALL_POSTS from '../graphql/api-all-posts';
+import { useQuery } from '@apollo/client';
+import { Order } from 'wp-graphql/lib/lib/abstract-types';
+
 interface IndexProps {
 	allPosts: AllPostsProps;
 	preview: boolean;
 	tagsAndPosts: TagProps[];
 	categories: CategoryProps[];
+	// filter: PostObjectsConnectionOrderbyEnum;
+	// setFilter: (filter: PostObjectsConnectionOrderbyEnum) => void;
 }
 
 const Index = ({
 	allPosts: { edges },
+	// filter,
+	// setFilter,
 	preview,
 	tagsAndPosts,
 	categories
-}: IndexProps): JSX.Element => {
+}: IndexProps) => {
 	// const heroPost = edges[0]?.node;
 	let morePosts = edges.slice(0);
-
+	const { TITLE } = PostObjectsConnectionOrderbyEnum;
 	const [filterQuery, setFilterQuery] = useState('title');
 	const [allCompanies, setAllCompanies] = useState<PostsProps[]>(morePosts);
 	const [filteredCompanies, setFilteredCompanies] = useState<PostsProps[]>(
@@ -61,10 +82,19 @@ const Index = ({
 	);
 	const [search, setSearch] = useState<string | null>(null);
 	const [searchCategory, setSearchedCategory] = useState<string | null>(null);
-
 	// console.log('tags:', tagsAndPosts);
 	// console.log('categories:', categoriesAndPosts);
 
+	const { data, error, loading } = useQuery<AllPostsData, AllPostsVariables>(
+		ALL_POSTS,
+		{
+			variables: {
+				field: PostObjectsConnectionOrderbyEnum.TITLE,
+				order: OrderEnum.ASC
+			}
+		}
+	);
+	const [filter, setFilter] = useState(TITLE);
 	useEffect(() => {
 		if (!search) {
 			setFilteredCompanies(allCompanies);
@@ -131,6 +161,7 @@ const Index = ({
 					dropdownOptions={['title', 'description']}
 					categories={categories}
 				/> */}
+				<CardFilter filter={filter} setFilter={setFilter} />
 				<div className='items-center content-center justify-center block max-w-full mx-auto my-portfolioH2F'>
 					{morePosts.length > 0 && <Cards posts={filteredCompanies} />}
 				</div>
@@ -141,57 +172,21 @@ const Index = ({
 	);
 };
 
-export enum Field {
-	TITLE = 'TITLE',
-	MODIFIED = 'MODIFIED',
-	DATE = 'DATE'
-}
-
-export enum Order {
-	ASC = 'ASC',
-	DESC = 'DESC'
-}
-
 interface StaticProps extends GetStaticProps {
 	preview: boolean;
 	context: any;
-	field: Field;
-	order: Order;
+	field: PostObjectsConnectionOrderbyEnum;
+	order: OrderEnum;
 	desiredCategory: string;
 }
 
-/*
-type PostTypesListed =
-	| 'title'
-	| 'date'
-	| 'slug'
-	| 'coverImage'
-	| 'excerpt'
-	| 'articleImage'
-	| 'postTitle';
-*/
-
-const { TITLE, MODIFIED, DATE } = Field;
-const { ASC, DESC } = Order;
-
-// 09/12/20 --- Note
-// test ISR (incremental static regeneration)
-// this uses revalidate in getStaticProps and is a hybrid method
-
-// ISR usage -> replaced getServerSideProps with getStaticProps success
-
-/*
-IMPORTANT
-@jlovejo2 check out this link...seems very promising for systematically deriving GQL types from lib/api
-https://github.com/vercel/next.js/pull/11842/files
-IMPORTANT
-*/
+const { TITLE, AUTHOR, DATE, MODIFIED } = PostObjectsConnectionOrderbyEnum;
 
 export const getStaticProps = async ({
 	preview = false,
 	// context,
-	field = TITLE || MODIFIED || DATE,
-	order = ASC || DESC,
+	field = DATE,
+	order = OrderEnum.DESC,
 	desiredCategory
 }: StaticProps) => {
 	// console.log(context);
@@ -205,9 +200,9 @@ export const getStaticProps = async ({
 
 	// const apolloClient: ApolloClient<NormalizedCacheObject> = initializeApollo();
 
-	// await apolloClient.query({
-	// 	query: ALL_POSTS_QUERY,
-	// 	variables: allPostsQueryVars
+	// await apolloClient.query<OrderEnum, PostObjectsConnectionOrderbyEnum>({
+	// 	query: ALL_POSTS,
+	// 	variables: OrderEnum.ASC && PostObjectsConnectionOrderbyEnum.TITLE
 	// });
 	// const userOptions = await getAllPostsForHomeSorted(preview, field);
 	// IMPORTANT https://nextjs.org/blog/next-9-5#stable-incremental-static-regeneration

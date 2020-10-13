@@ -12,3 +12,5 @@ const CATEGORIES_BY_NODES = gql`
 		}
 	}
 `;
+
+export default CATEGORIES_BY_NODES;

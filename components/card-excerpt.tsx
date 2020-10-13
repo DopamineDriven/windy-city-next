@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown/with-html';
+import { PostExcerpts_posts_edges_node } from 'graphql/__generated__/PostExcerpts';
 
 interface CardExcerptProps {
 	excerpt: string;

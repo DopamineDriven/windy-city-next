@@ -27,6 +27,14 @@ export enum OrderEnum {
 }
 
 /**
+ * The format of post field data.
+ */
+export enum PostObjectFieldFormatEnum {
+	RAW = 'RAW',
+	RENDERED = 'RENDERED'
+}
+
+/**
  * Field to order the connection by
  */
 export enum PostObjectsConnectionOrderbyEnum {

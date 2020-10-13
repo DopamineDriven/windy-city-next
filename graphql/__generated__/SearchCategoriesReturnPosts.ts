@@ -182,6 +182,10 @@ export interface SearchCategoriesReturnPosts_categories_edges_node {
 	 */
 	id: string;
 	/**
+	 * An alphanumeric identifier for the object unique to its type.
+	 */
+	slug: string | null;
+	/**
 	 * Connection between the category type and the post type
 	 */
 	posts: SearchCategoriesReturnPosts_categories_edges_node_posts | null;
@@ -215,4 +219,5 @@ export interface SearchCategoriesReturnPostsVariables {
 	search?: string | null;
 	field: PostObjectsConnectionOrderbyEnum;
 	order: OrderEnum;
+	hideEmpty: boolean;
 }
