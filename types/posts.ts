@@ -40,9 +40,9 @@ export interface authorType {
 }
 
 export interface authorProps {
-	name: string;
-	firstName: string;
-	lastName: string;
+	name?: string;
+	firstName?: string;
+	lastName?: string;
 	avatar: avatarProps;
 }
 
