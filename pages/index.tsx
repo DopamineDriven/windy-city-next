@@ -53,7 +53,6 @@ import {
 } from 'graphql/__generated__/AllPosts';
 import ALL_POSTS from '../graphql/api-all-posts';
 import { useQuery } from '@apollo/client';
-import { Order } from 'wp-graphql/lib/lib/abstract-types';
 
 interface IndexProps {
 	allPosts: AllPostsProps;
