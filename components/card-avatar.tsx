@@ -1,7 +1,7 @@
 import Modified from 'components/date-modified';
 import { authorProps } from 'types/posts';
 import { Fragment } from 'react';
-import { Author_users_edges_node_avatar } from '../graphql/__generated__/Author';
+// import { Author_users_edges_node_avatar } from '../graphql/__generated__/Author';
 
 interface AvatarProps {
 	author: authorProps;
