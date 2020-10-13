@@ -4,7 +4,7 @@ import { PostSlugs_posts_edges_node } from '../graphql/__generated__/PostSlugs';
 
 interface CardTitleProps {
 	title: string;
-	slug?: PostSlugs_posts_edges_node;
+	slug?: string | number;
 	// postTitle: string;
 }
 
