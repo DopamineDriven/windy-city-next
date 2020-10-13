@@ -12,7 +12,6 @@ import { CMS_NAME } from 'lib/constants';
 import MoreCards from 'components/cards-coalesced';
 import { Fragment } from 'react';
 import { MediaContextProvider } from 'lib/window-width';
-import GET_ALL_POSTS_WITH_SLUG from 'graphql/api-post-slugs';
 
 interface SlugProps {
 	post: any;
