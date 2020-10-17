@@ -1,5 +1,9 @@
 # windy-city-next
 
+## Building a vision on Figma
+
+- underway
+
 ## Multilingual Support
 
 - https://www.storyblok.com/tp/next-js-react-guide
