@@ -28,7 +28,23 @@
   - for the www. record, keep only the `www` snippet appended 👍
   - Takes 30-60min for validation to complete
   - https://lightsail.aws.amazon.com/ls/docs/en_us/articles/verify-tls-ssl-certificate-using-dns-cname-https
--
+- After this is validated, toggle the switch to enable custom domains
+  - It will state that your distribution always serves content using its default domain name
+    - xyz123.cloudfront.net
+  - Copy this value, then head back to namecheap
+  - add two more CNAME records
+    - one with the host having just an @ to denote no subdomain prepending our custom domain
+    - the other having `www` to denote that our subdomain will have the www prepended
+      - both of their values should target the `xyz123.cloudfront.net` address of your default distribution
+- ONLY TOOK 11 MINUTES sdgjiadlfkjsd'fks
+- Do not need to use the below
+- Custom Nameservers with Namecheap
+  - navigate to nameservers on the domain control panel (under domains)
+  - choose "custom DNS"
+  - enter the four `ns-` nameservers specified by amazon lightsail here
+- While this is validating, head to the home screen and create a DNS zone using your custom domain name
+  - Add two A records to this, pointing at (resolves to) your distribution (distribution-1)
+  - Then, create two CNAME records, and repeat the process you completed above
 
 ## Building a vision on Figma
 
