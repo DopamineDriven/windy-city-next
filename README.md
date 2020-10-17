@@ -1,5 +1,17 @@
 # windy-city-next
 
+## Create Instance (Linux)
+
+- LightSail is essentially a GUI built on top of Cloudfront
+- Configure Static IP and attach to newly created Instance
+- Then, go back to networking on the home page and create a distribution
+  - WordPress cache behavior preset?
+  - LightSail has taken configuration you'd otherwise have to do inside of Cloudfront interface and they've come up with
+  - Can select various preset options based on website type (dynamic, static, best for WP, etc)
+  - choose 50GB/month plan, free for first year, \$2.50/month thereafter
+  - if you exceed 50GB/month, then wordpress will charge you a minimum of \$0.09 USD per GB over (varies by AWS Region)
+  - keep http if setting up from scratch
+
 ## Building a vision on Figma
 
 - underway
