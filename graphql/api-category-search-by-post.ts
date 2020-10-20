@@ -22,9 +22,7 @@ const SEARCH_CATEGORIES_RETURN_POSTS = gql`
 								uri
 								social {
 									facebook
-									github
 									instagram
-									linkedin
 									twitter
 									website
 								}

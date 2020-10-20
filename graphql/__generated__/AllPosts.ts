@@ -83,17 +83,9 @@ export interface AllPosts_posts_edges_node_social {
 	 */
 	facebook: string | null;
 	/**
-	 * GitHub Url (mandatory)
-	 */
-	github: string | null;
-	/**
 	 * Instagram Url (optional)
 	 */
 	instagram: string | null;
-	/**
-	 * LinkedIn Url (mandatory)
-	 */
-	linkedin: string | null;
 	/**
 	 * Twitter Url (optional)
 	 */

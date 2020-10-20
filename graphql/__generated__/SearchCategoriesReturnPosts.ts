@@ -19,17 +19,9 @@ export interface SearchCategoriesReturnPosts_categories_edges_node_posts_edges_n
 	 */
 	facebook: string | null;
 	/**
-	 * GitHub Url (mandatory)
-	 */
-	github: string | null;
-	/**
 	 * Instagram Url (optional)
 	 */
 	instagram: string | null;
-	/**
-	 * LinkedIn Url (mandatory)
-	 */
-	linkedin: string | null;
 	/**
 	 * Twitter Url (optional)
 	 */

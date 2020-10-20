@@ -1,6 +1,5 @@
 import { GraphQLObjectType } from 'graphql';
 import { fetchAPI } from 'lib/api';
-import { postStatusObjectType } from 'wp-graphql/lib/models/post-statuses/types/postStatusType';
 
 /*
  const RGBType = new GraphQLEnumType({

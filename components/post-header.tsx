@@ -67,3 +67,5 @@ export default function PostHeader({
 		</>
 	);
 }
+
+//	<Categories edges={categories.edges} categories={categories.categories} />

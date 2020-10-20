@@ -32,11 +32,11 @@
   - It will state that your distribution always serves content using its default domain name
     - xyz123.cloudfront.net
   - Copy this value, then head back to namecheap
-  - add two more CNAME records
-    - one with the host having just an @ to denote no subdomain prepending our custom domain
-    - the other having `www` to denote that our subdomain will have the www prepended
-      - both of their values should target the `xyz123.cloudfront.net` address of your default distribution
-- ONLY TOOK 11 MINUTES sdgjiadlfkjsd'fks
+  - add two more records
+    - one CNAME record with the host having the `www` to denote that our subdomain will have the www prepended
+    - the other as an ALIAS record to point to the root domain by Host `@` (CNAME records do not support this -- womp womp)
+      - both of their values should target the `xyz123.cloudfront.net` address of your default domain name distribution
+- ONLY TOOK 11 MINUTES (528-539) sdgjiadlfkjsd'fks
 - Do not need to use the below
 - Custom Nameservers with Namecheap
   - navigate to nameservers on the domain control panel (under domains)
