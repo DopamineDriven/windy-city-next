@@ -15,7 +15,7 @@
 		"prettier-check": "prettier --config .prettierrc --check .",
 		"prettier-write": "prettier --config .prettierrc --write .",
 		"client:download": "dotenv cross-var yarn apollo client:download-schema --includes=graphql --endpoint=%WORDPRESS_API_URL%",
-		"client:generate": "yarn apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes=graphql/**/*.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts"
+		"client:generate": "yarn apollo codegen:generate --target=typescript --localSchemaFile=schema.json --includes=graphql/**/*.ts --tagName=gql --addTypename --globalTypesFile=types/graphql-global-types.ts"
 	},
 	"husky": {
 		"hooks": {

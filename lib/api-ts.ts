@@ -13,7 +13,6 @@ import { AllPostsProps, PostsProps } from 'types/posts';
 import TagProps from 'types/tag';
 // import { APIFetchOptions } from "@types/wordpress__api-fetch"
 // import { APIFetchOptions } from '@wordpress/api-fetch';
-import WPGraphQL from 'wp-graphql';
 import {
 	allPostsForHomeAlphabeticalArgs,
 	getAllPostsForAboutArgs,

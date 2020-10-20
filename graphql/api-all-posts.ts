@@ -32,9 +32,7 @@ const ALL_POSTS = gql`
 					slug
 					social {
 						facebook
-						github
 						instagram
-						linkedin
 						twitter
 						website
 					}

@@ -1,8 +1,7 @@
-import { Tag } from 'wp-graphql';
 import { DocumentNode } from 'graphql';
 
 interface TagProps {
-	node: DocumentNode & Tag;
+	node: DocumentNode & any;
 }
 
 // interface Tag {
